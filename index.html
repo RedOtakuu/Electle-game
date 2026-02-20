@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Electle - Daily Parliament</title>
+    
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🏛️</text></svg>">
+
+    <script src="https://cdn.jsdelivr.net/npm/svg-pan-zoom@3.6.1/dist/svg-pan-zoom.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+		<button class="back-btn" onclick="goToMenu()" title="Back to Menu">🏠</button>
+		<h1>🏛️ ELECTLE</h1>
+		<p class="subtitle">
+			Guess the <b>country</b> and <b>election year</b> based on the parliamentary seating diagram.<br>
+			(Lower house only)
+		</p>
+	</header>
+
+    <div class="top-section">
+        <div class="diagram-container">
+            <img id="diagram-img" src="" alt="Parliament Diagram" referrerpolicy="no-referrer">
+        </div>
+    </div>
+
+    <div class="map-wrapper">
+        <div class="zoom-controls">
+            <button class="zoom-btn" onclick="panZoom.zoomIn()">+</button>
+            <button class="zoom-btn" onclick="panZoom.zoomOut()">-</button>
+            <button class="zoom-btn" onclick="panZoom.reset()">↺</button>
+        </div>
+
+        <div id="map-placeholder"></div>
+    </div>
+
+    <div class="bottom-section">
+        <div class="controls">
+            <div class="status-text" id="selected-display">Selected: <span>—</span></div>
+            <input type="number" id="year-input" placeholder="Year" value="">
+            <button class="guess-btn" id="submit-btn" onclick="makeGuess()">GUESS</button>
+        </div>
+        <div class="history-log" id="history"></div>
+        
+        <div id="main-timer-box">
+            <span style="color: #888; font-size: 0.8em;">NEXT PARLIAMENT IN:</span><br>
+            <span class="countdown-text" style="font-size: 1.1em; font-weight: bold; font-family: monospace;">00:00:00</span>
+        </div>
+    </div>
+
+    <div id="win-modal" class="modal-overlay">
+        <div class="modal-content">
+            <button class="close-btn" onclick="closeModal()">✕</button>
+            <div class="modal-title">🎉 VICTORY!</div>
+            <div class="modal-info">
+                You identified <b style="color:var(--accent-blue)" id="win-country-name"></b><br>
+                Election Year: <b style="color:var(--correct-green)" id="win-year-val"></b>
+            </div>
+            <div class="stats-container">
+                <div class="stat-header">Attempts: <span id="attempt-count">0</span></div>
+                <div id="win-history-list"></div>
+            </div>
+            <div style="font-size: 0.8em; text-transform: uppercase; color: #888; margin-top: 15px;">Next Game In</div>
+            <div class="countdown-text" style="font-size: 1.5rem; font-weight: bold; font-family: monospace; margin-top: 5px;">00:00:00</div>
+			<button id="next-round-btn" onclick="nextRound()">⏭ NEXT ROUND</button>
+        </div>
+    </div>
+
+	<div id="main-menu">
+		<div class="menu-title">🏛️ ELECTLE</div>
+		<div class="menu-desc">Test your knowledge of parliamentary politics. Guess the country and election year based on the seating plan.</div>
+		
+		<button class="menu-btn primary" onclick="startGame('daily')">
+			📅 Daily Mode
+		</button>
+		<button class="menu-btn" onclick="startGame('endless')">
+			♾️ Endless Mode
+		</button>
+	</div>
+	<script src="data.js"></script>
+    <script>
+		let target = null;
+		let selectedId = null;
+		let selectedName = null;
+		let panZoom = null;
+		let gameActive = false;
+		let currentMode = 'daily';
+		let countryGuessed = false;
+
+		window.onload = function() {
+			const container = document.getElementById('map-placeholder');
+			if (container) {
+				container.innerHTML = WORLD_MAP_SVG;
+			}
+			panZoom = svgPanZoom('#world-map', {
+				zoomEnabled: true, controlIconsEnabled: false, fit: true, center: true, minZoom: 0.5, maxZoom: 20, preventMouseEventsDefault: false,
+				beforePan: function(oldPan, newPan) {
+					var sizes = this.getSizes();
+					var gutterWidth = sizes.width, gutterHeight = sizes.height;
+					var leftLimit = -((sizes.viewBox.x + sizes.viewBox.width) * sizes.realZoom) + gutterWidth / 2;
+					var rightLimit = sizes.width - gutterWidth / 2;
+					var topLimit = -((sizes.viewBox.y + sizes.viewBox.height) * sizes.realZoom) + gutterHeight / 2;
+					var bottomLimit = sizes.height - gutterHeight / 2;
+					return { x: Math.max(leftLimit, Math.min(rightLimit, newPan.x)), y: Math.max(topLimit, Math.min(bottomLimit, newPan.y)) };
+				}
+			});
+
+			setInterval(updateCountdown, 1000);
+			updateCountdown();
+
+			setupMapEvents();
+		};
+
+		function startGame(mode) {
+			currentMode = mode;
+			
+			document.getElementById('main-menu').classList.add('hidden');
+			
+			resetGameStateUI();
+
+			if (mode === 'daily') {
+				target = getDailyTarget();
+				const todayStr = new Date().toISOString().split('T')[0];
+				const lastWon = localStorage.getItem('electle_last_won');
+
+				if (lastWon === todayStr) {
+					gameActive = false;
+					document.getElementById('diagram-img').src = target.img;
+					showWinModal(true); 
+					document.getElementById('main-timer-box').style.display = 'block';
+				} else {
+					gameActive = true;
+					document.getElementById('diagram-img').src = target.img;
+				}
+			} else {
+				nextRound();
+			}
+			
+			setTimeout(() => panZoom.resize(), 350); 
+		}
+
+		function goToMenu() {
+			document.getElementById('main-menu').classList.remove('hidden');
+			closeModal();
+		}
+
+		function nextRound() {
+			if (currentMode !== 'endless') return;
+			
+			const randomIndex = Math.floor(Math.random() * database.length);
+			target = database[randomIndex];
+			
+			resetGameStateUI();
+			gameActive = true;
+			document.getElementById('diagram-img').src = target.img;
+			
+			console.log("New Round:", target.country);
+		}
+
+		function getDailyTarget() {
+			const epoch = new Date("2024-01-01");
+			const today = new Date();
+			const diffTime = Math.abs(today - epoch);
+			const diffDays = Math.floor(diffTime / (1000 * 60 * 60 * 24)); 
+			const index = diffDays % database.length;
+			return database[index];
+		}
+
+		function resetGameStateUI() {
+			selectedId = null;
+			countryGuessed = false;
+			document.querySelectorAll('path').forEach(p => p.classList.remove('correct', 'wrong', 'regional', 'selected'));
+			document.getElementById('year-input').value = ''; 
+			document.getElementById('year-input').disabled = false;
+			document.getElementById('submit-btn').disabled = false;
+			document.getElementById('history').innerHTML = '';
+			document.getElementById('win-modal').classList.remove('visible');
+			document.getElementById('main-timer-box').style.display = 'none';
+			document.getElementById('selected-display').innerHTML = "Selected: <span>—</span>";
+			if(panZoom) panZoom.reset();
+		}
+
+		function setupMapEvents() {
+			const paths = document.querySelectorAll('path');
+			paths.forEach(p => {
+				p.addEventListener('click', () => handleCountrySelect(p));
+				let startX, startY;
+				p.addEventListener('touchstart', (e) => {
+					if (e.touches.length > 1) return; 
+					startX = e.touches[0].clientX; startY = e.touches[0].clientY;
+				}, { passive: true });
+				p.addEventListener('touchend', (e) => {
+					if (!startX || !startY) return;
+					const endX = e.changedTouches[0].clientX; const endY = e.changedTouches[0].clientY;
+					if (Math.abs(endX - startX) < 10 && Math.abs(endY - startY) < 10) {
+						e.preventDefault(); handleCountrySelect(p);
+					}
+					startX = null; startY = null;
+				});
+			});
+		}
+
+		function getRegionByCountryId(id) {
+			const upperId = id.toUpperCase(); 
+			for (const [region, countries] of Object.entries(regionMap)) {
+				if (countries.includes(upperId)) return region;
+			}
+			return null;
+		}
+
+		function handleCountrySelect(el) {
+			if (!gameActive || countryGuessed) return;
+			if (el.classList.contains('correct') || el.classList.contains('wrong')) return;
+
+			if (selectedId) {
+				const oldPieces = document.querySelectorAll(`path[id="${selectedId}"]`);
+				oldPieces.forEach(piece => piece.classList.remove('selected'));
+			}
+
+			selectedId = el.id;
+			selectedName = el.getAttribute('name') || el.id;
+			
+			const newPieces = document.querySelectorAll(`path[id="${selectedId}"]`);
+			newPieces.forEach(piece => piece.classList.add('selected'));
+
+			document.getElementById('selected-display').innerHTML = `Selected: <span>${selectedName}</span>`;
+		}
+
+		function makeGuess() {
+			if (!gameActive) return;
+
+			const yearInput = document.getElementById('year-input');
+			const statusText = document.getElementById('selected-display');
+			const userYear = parseInt(yearInput.value);
+
+			if (!selectedId) { statusText.innerHTML = "<span style='color:#ff5555'>⚠ Select a country!</span>"; return; }
+			if (!userYear) { statusText.innerHTML = "<span style='color:#ff5555'>⚠ Enter year!</span>"; return; }
+
+			// --- FIX START: Нормализуем ID ---
+			// 1. Получаем массив правильных ID и сразу переводим их в ВЕРХНИЙ регистр,
+			// чтобы они совпадали с ID в SVG карте (cz -> CZ)
+			let rawIds = target.ids ? target.ids : [target.id];
+			const correctIds = rawIds.map(id => id.toUpperCase());
+			
+			// 2. Выбранный ID тоже проверяем в верхнем регистре
+			const currentSelectedUpper = selectedId.toUpperCase();
+
+			// Проверяем: входит ли выбранная страна в список правильных
+			const isCountryCorrect = correctIds.includes(currentSelectedUpper);
+			// --- FIX END ---
+			
+			const userRegion = getRegionByCountryId(selectedId);
+			const isRegionCorrect = (userRegion === target.region);
+			const yearDiff = Math.abs(userYear - target.year);
+
+			// Убираем временную синюю подсветку
+			document.querySelectorAll(`path[id="${selectedId}"]`).forEach(el => el.classList.remove('selected'));
+
+			if (isCountryCorrect) {
+				countryGuessed = true; 
+				
+				// ТЕПЕРЬ ЭТО РАБОТАЕТ: Красим ВСЕ части целевой страны
+				// Так как correctIds теперь в верхнем регистре, querySelector найдет нужные пути
+				correctIds.forEach(id => {
+					document.querySelectorAll(`path[id="${id}"]`).forEach(el => {
+						el.classList.remove('wrong', 'regional'); 
+						el.classList.add('correct');
+					});
+				});
+				
+				selectedName = target.country; 
+				
+			} else if (isRegionCorrect) {
+				const regionCountries = regionMap[target.region];
+				if (regionCountries) {
+					regionCountries.forEach(countryId => {
+						// 1. Приводим ID из базы к верхнему регистру, чтобы найти его на карте
+						const upperId = countryId.toUpperCase();
+
+						// 2. Мы УБРАЛИ проверку (!correctIds.includes), 
+						// теперь правильный ответ тоже покрасится в желтый вместе с соседями.
+
+						document.querySelectorAll(`path[id="${upperId}"]`).forEach(el => {
+							// Красим в желтый, ТОЛЬКО если:
+							// - Это не та страна, которую мы сейчас кликнули (она будет красной)
+							// - Эта страна еще не угадана (не зеленая)
+							if (el.id !== selectedId && !el.classList.contains('correct')) {
+								el.classList.add('regional');
+							}
+						});
+					});
+				}
+				// А ту страну, которую юзер выбрал ошибочно, красим в красный
+				document.querySelectorAll(`path[id="${selectedId}"]`).forEach(el => el.classList.add('wrong'));
+			} else {
+				document.querySelectorAll(`path[id="${selectedId}"]`).forEach(el => el.classList.add('wrong'));
+			}
+
+			// ЛОГИКА ИСТОРИИ (без изменений)
+			let yearIcon = yearDiff === 0 ? "✅" : (userYear < target.year ? "↑" : "↓");
+			let rowClass = "history-row";
+			if (isCountryCorrect && yearDiff === 0) rowClass += " win";
+			else if (isCountryCorrect || isRegionCorrect) rowClass += " close";
+			let icon = isCountryCorrect ? "🌍✅" : (isRegionCorrect ? "🌍🟡" : "🌍❌");
+
+			const historyLog = document.getElementById('history');
+			const row = document.createElement('div');
+			row.className = rowClass;
+			row.innerHTML = `<div>${selectedName}</div><div>${icon} | ${userYear} ${yearIcon}</div>`;
+			historyLog.prepend(row);
+
+			if (isCountryCorrect && yearDiff === 0) {
+				gameActive = false;
+				statusText.innerHTML = "<span style='color:#538d4e'>VICTORY!</span>";
+				if (currentMode === 'daily') {
+					localStorage.setItem('electle_last_won', new Date().toISOString().split('T')[0]);
+					document.getElementById('main-timer-box').style.display = 'block'; 
+				}
+				setTimeout(() => showWinModal(false), 1500);
+			} else if (isCountryCorrect) {
+				statusText.innerHTML = `<span style='color:#538d4e'>Correct! Now fix the Year (${yearIcon})</span>`;
+				yearInput.select();
+			} else {
+				selectedId = null;
+				statusText.innerHTML = "Selected: <span>—</span>";
+				yearInput.value = "";
+			}
+		}
+		function showWinModal(instant) {
+			document.getElementById('win-country-name').innerText = target.country;
+			document.getElementById('win-year-val').innerText = target.year;
+			document.getElementById('submit-btn').disabled = true;
+			document.getElementById('year-input').disabled = true;
+
+			const historyRows = document.querySelectorAll('.history-row');
+			document.getElementById('attempt-count').innerText = historyRows.length;
+			const listContainer = document.getElementById('win-history-list');
+			listContainer.innerHTML = '';
+			for (let i = 0; i < historyRows.length; i++) {
+				const miniRow = document.createElement('div');
+				miniRow.className = 'mini-row';
+				miniRow.innerHTML = historyRows[i].innerHTML;
+				listContainer.appendChild(miniRow);
+			}
+
+			const timerEls = document.querySelectorAll('.countdown-text');
+			const nextBtn = document.getElementById('next-round-btn');
+			const timerLabel = document.querySelector('.modal-content div[style*="text-transform: uppercase"]'); // Надпись "NEXT GAME IN"
+
+			if (currentMode === 'endless') {
+				nextBtn.style.display = 'block';
+				timerEls.forEach(el => el.style.display = 'none');
+				if(timerLabel) timerLabel.style.display = 'none';
+			} else {
+				nextBtn.style.display = 'none';
+				timerEls.forEach(el => el.style.display = 'block');
+				if(timerLabel) timerLabel.style.display = 'block';
+			}
+			
+			const modal = document.getElementById('win-modal');
+			modal.classList.add('visible');
+			if(instant) modal.style.transition = 'none';
+		}
+
+		function closeModal() {
+			document.getElementById('win-modal').classList.remove('visible');
+		}
+
+		function updateCountdown() {
+			const now = new Date();
+			const tomorrow = new Date(now);
+			tomorrow.setDate(tomorrow.getDate() + 1);
+			tomorrow.setHours(0, 0, 0, 0);
+			const diff = tomorrow - now;
+			const h = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+			const m = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+			const s = Math.floor((diff % (1000 * 60)) / 1000);
+			const timeStr = `${h.toString().padStart(2,'0')}:${m.toString().padStart(2,'0')}:${s.toString().padStart(2,'0')}`;
+			document.querySelectorAll('.countdown-text').forEach(t => t.innerText = timeStr);
+		}
+    </script>
+</body>
+</html>
