@@ -238,31 +238,22 @@
 			if (!selectedId) { statusText.innerHTML = "<span style='color:#ff5555'>⚠ Select a country!</span>"; return; }
 			if (!userYear) { statusText.innerHTML = "<span style='color:#ff5555'>⚠ Enter year!</span>"; return; }
 
-			// --- FIX START: Нормализуем ID ---
-			// 1. Получаем массив правильных ID и сразу переводим их в ВЕРХНИЙ регистр,
-			// чтобы они совпадали с ID в SVG карте (cz -> CZ)
 			let rawIds = target.ids ? target.ids : [target.id];
 			const correctIds = rawIds.map(id => id.toUpperCase());
 			
-			// 2. Выбранный ID тоже проверяем в верхнем регистре
 			const currentSelectedUpper = selectedId.toUpperCase();
 
-			// Проверяем: входит ли выбранная страна в список правильных
 			const isCountryCorrect = correctIds.includes(currentSelectedUpper);
-			// --- FIX END ---
 			
 			const userRegion = getRegionByCountryId(selectedId);
 			const isRegionCorrect = (userRegion === target.region);
 			const yearDiff = Math.abs(userYear - target.year);
 
-			// Убираем временную синюю подсветку
 			document.querySelectorAll(`path[id="${selectedId}"]`).forEach(el => el.classList.remove('selected'));
 
 			if (isCountryCorrect) {
 				countryGuessed = true; 
 				
-				// ТЕПЕРЬ ЭТО РАБОТАЕТ: Красим ВСЕ части целевой страны
-				// Так как correctIds теперь в верхнем регистре, querySelector найдет нужные пути
 				correctIds.forEach(id => {
 					document.querySelectorAll(`path[id="${id}"]`).forEach(el => {
 						el.classList.remove('wrong', 'regional'); 
@@ -276,29 +267,19 @@
 				const regionCountries = regionMap[target.region];
 				if (regionCountries) {
 					regionCountries.forEach(countryId => {
-						// 1. Приводим ID из базы к верхнему регистру, чтобы найти его на карте
-						const upperId = countryId.toUpperCase();
-
-						// 2. Мы УБРАЛИ проверку (!correctIds.includes), 
-						// теперь правильный ответ тоже покрасится в желтый вместе с соседями.
-
 						document.querySelectorAll(`path[id="${upperId}"]`).forEach(el => {
-							// Красим в желтый, ТОЛЬКО если:
-							// - Это не та страна, которую мы сейчас кликнули (она будет красной)
-							// - Эта страна еще не угадана (не зеленая)
+
 							if (el.id !== selectedId && !el.classList.contains('correct')) {
 								el.classList.add('regional');
 							}
 						});
 					});
 				}
-				// А ту страну, которую юзер выбрал ошибочно, красим в красный
 				document.querySelectorAll(`path[id="${selectedId}"]`).forEach(el => el.classList.add('wrong'));
 			} else {
 				document.querySelectorAll(`path[id="${selectedId}"]`).forEach(el => el.classList.add('wrong'));
 			}
 
-			// ЛОГИКА ИСТОРИИ (без изменений)
 			let yearIcon = yearDiff === 0 ? "✅" : (userYear < target.year ? "↑" : "↓");
 			let rowClass = "history-row";
 			if (isCountryCorrect && yearDiff === 0) rowClass += " win";
