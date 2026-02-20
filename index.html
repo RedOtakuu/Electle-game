@@ -267,6 +267,7 @@
 				const regionCountries = regionMap[target.region];
 				if (regionCountries) {
 					regionCountries.forEach(countryId => {
+						const upperId = countryId.toUpperCase();
 						document.querySelectorAll(`path[id="${upperId}"]`).forEach(el => {
 
 							if (el.id !== selectedId && !el.classList.contains('correct')) {
