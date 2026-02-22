@@ -7534,192 +7534,192 @@ const database = [
 		"wiki_link": "https://es.wikipedia.org/wiki/Elecciones_generales_de_Per%C3%BA_de_1931"
 	},
 	{
-		"ids": ["pe"],
-		"country": "Peru",
+		"ids": ["bo"],
+		"country": "Bolivia",
 		"year": 2025,
 		"region": "South America",
 		"img": "https://commons.wikimedia.org/wiki/Special:FilePath/Bolivia_Chamber_of_Deputies_2025.svg?width=600",
 		"wiki_link": "https://en.wikipedia.org/wiki/2025_Bolivian_general_election?ysclid=mliiv2d9ir899672660#Chamber_of_Deputies"
 	},
 	{
-		"ids": ["pe"],
-		"country": "Peru",
+		"ids": ["bo"],
+		"country": "Bolivia",
 		"year": 2020,
 		"region": "South America",
 		"img": "https://commons.wikimedia.org/wiki/Special:FilePath/Bolivie_Chambre_des_députés_2020.svg?width=600",
 		"wiki_link": "https://en.wikipedia.org/wiki/2020_Bolivian_general_election#Chamber_of_Deputies"
 	},
 	{
-		"ids": ["pe"],
-		"country": "Peru",
+		"ids": ["bo"],
+		"country": "Bolivia",
 		"year": 2019,
 		"region": "South America",
 		"img": "https://commons.wikimedia.org/wiki/Special:FilePath/Cámara_de_Diputados_de_Bolivia_elecciones_2019.svg?width=600",
 		"wiki_link": "https://es.wikipedia.org/wiki/Elecciones_generales_de_Bolivia_de_2019#C%C3%A1mara_de_Diputados"
 	},
 	{
-		"ids": ["pe"],
-		"country": "Peru",
+		"ids": ["bo"],
+		"country": "Bolivia",
 		"year": 2014,
 		"region": "South America",
 		"img": "https://commons.wikimedia.org/wiki/Special:FilePath/Cámara_de_Diputados_de_Bolivia_elecciones_2014.svg?width=600",
 		"wiki_link": "https://es.wikipedia.org/wiki/Elecciones_generales_de_Bolivia_de_2014#C%C3%A1mara_de_Diputados"
 	},
 	{
-		"ids": ["pe"],
-		"country": "Peru",
+		"ids": ["bo"],
+		"country": "Bolivia",
 		"year": 2009,
 		"region": "South America",
 		"img": "https://commons.wikimedia.org/wiki/Special:FilePath/Cámara_de_Diputados_de_Bolivia_elecciones_2009.svg?width=600",
 		"wiki_link": "https://en.wikipedia.org/wiki/2009_Bolivian_general_election#Chamber_of_Deputies"
 	},
 	{
-		"ids": ["pe"],
-		"country": "Peru",
+		"ids": ["bo"],
+		"country": "Bolivia",
 		"year": 2005,
 		"region": "South America",
 		"img": "https://commons.wikimedia.org/wiki/Special:FilePath/Cámara_de_Diputados_de_Bolivia_elecciones_2005.svg?width=600",
 		"wiki_link": "https://en.wikipedia.org/wiki/2005_Bolivian_general_election#Chamber_of_Deputies"
 	},
 	{
-		"ids": ["pe"],
-		"country": "Peru",
+		"ids": ["bo"],
+		"country": "Bolivia",
 		"year": 2002,
 		"region": "South America",
 		"img": "https://commons.wikimedia.org/wiki/Special:FilePath/Cámara_de_Diputados_de_Bolivia_elecciones_2002.svg?width=600",
 		"wiki_link": "https://en.wikipedia.org/wiki/2002_Bolivian_general_election#Chanber_of_Deputies"
 	},
 	{
-		"ids": ["pe"],
-		"country": "Peru",
+		"ids": ["bo"],
+		"country": "Bolivia",
 		"year": 1997,
 		"region": "South America",
 		"img": "https://commons.wikimedia.org/wiki/Special:FilePath/Cámara_de_Diputados_de_Bolivia_elecciones_1997.svg?width=600",
 		"wiki_link": "https://en.wikipedia.org/wiki/1997_Bolivian_general_election#Chamber_of_Deputies"
 	},
 	{
-		"ids": ["pe"],
-		"country": "Peru",
+		"ids": ["bo"],
+		"country": "Bolivia",
 		"year": 1993,
 		"region": "South America",
 		"img": "https://commons.wikimedia.org/wiki/Special:FilePath/Cámara_de_Diputados_de_Bolivia_elecciones_1993.svg?width=600",
 		"wiki_link": "https://en.wikipedia.org/wiki/1993_Bolivian_general_election#Results"
 	},
 	{
-		"ids": ["pe"],
-		"country": "Peru",
+		"ids": ["bo"],
+		"country": "Bolivia",
 		"year": 1989,
 		"region": "South America",
 		"img": "https://commons.wikimedia.org/wiki/Special:FilePath/Cámara_de_Diputados_de_Bolivia_elecciones_1989.svg?width=600",
 		"wiki_link": "https://en.wikipedia.org/wiki/1989_Bolivian_general_election#Results"
 	},
 	{
-		"ids": ["pe"],
-		"country": "Peru",
+		"ids": ["bo"],
+		"country": "Bolivia",
 		"year": 1985,
 		"region": "South America",
 		"img": "https://commons.wikimedia.org/wiki/Special:FilePath/Cámara_de_Diputados_de_Bolivia_elecciones_1985.svg?width=600",
 		"wiki_link": "https://en.wikipedia.org/wiki/1985_Bolivian_general_election#Results"
 	},
 	{
-		"ids": ["pe"],
-		"country": "Peru",
+		"ids": ["bo"],
+		"country": "Bolivia",
 		"year": 1980,
 		"region": "South America",
 		"img": "https://commons.wikimedia.org/wiki/Special:FilePath/Cámara_de_Diputados_de_Bolivia_elecciones_1980.svg?width=600",
 		"wiki_link": "https://en.wikipedia.org/wiki/1980_Bolivian_general_election#Results"
 	},
 	{
-		"ids": ["pe"],
-		"country": "Peru",
+		"ids": ["bo"],
+		"country": "Bolivia",
 		"year": 1979,
 		"region": "South America",
 		"img": "https://commons.wikimedia.org/wiki/Special:FilePath/Cámara_de_Diputados_de_Bolivia_elecciones_1979.svg?width=600",
 		"wiki_link": "https://en.wikipedia.org/wiki/1979_Bolivian_general_election#Results"
 	},
 	{
-		"ids": ["pe"],
-		"country": "Peru",
+		"ids": ["bo"],
+		"country": "Bolivia",
 		"year": 1966,
 		"region": "South America",
 		"img": "https://commons.wikimedia.org/wiki/Special:FilePath/Cámara_de_Diputados_de_Bolivia_elecciones_1966.svg?width=600",
 		"wiki_link": "https://en.wikipedia.org/wiki/1966_Bolivian_general_election#Results"
 	},
 	{
-		"ids": ["pe"],
-		"country": "Peru",
+		"ids": ["bo"],
+		"country": "Bolivia",
 		"year": 1964,
 		"region": "South America",
 		"img": "https://commons.wikimedia.org/wiki/Special:FilePath/Cámara_de_Diputados_de_Bolivia_elecciones_1964.svg?width=600",
 		"wiki_link": "https://es.wikipedia.org/wiki/Elecciones_generales_de_Bolivia_de_1964#Resultados"
 	},
 	{
-		"ids": ["pe"],
-		"country": "Peru",
+		"ids": ["bo"],
+		"country": "Bolivia",
 		"year": 1962,
 		"region": "South America",
 		"img": "https://commons.wikimedia.org/wiki/Special:FilePath/Cámara_de_Diputados_de_Bolivia_elecciones_1962.svg?width=600",
 		"wiki_link": "https://es.wikipedia.org/wiki/Elecciones_parlamentarias_de_Bolivia_de_1962#Resultados"
 	},
 	{
-		"ids": ["pe"],
-		"country": "Peru",
+		"ids": ["bo"],
+		"country": "Bolivia",
 		"year": 1960,
 		"region": "South America",
 		"img": "https://commons.wikimedia.org/wiki/Special:FilePath/Cámara_de_Diputados_de_Bolivia_elecciones_1960.svg?width=600",
 		"wiki_link": "https://es.wikipedia.org/wiki/Elecciones_generales_de_Bolivia_de_1960#Resultados"
 	},
 	{
-		"ids": ["pe"],
-		"country": "Peru",
+		"ids": ["bo"],
+		"country": "Bolivia",
 		"year": 1949,
 		"region": "South America",
 		"img": "https://commons.wikimedia.org/wiki/Special:FilePath/Cámara_de_Diputados_de_Bolivia_elecciones_1949.svg?width=600",
 		"wiki_link": "https://es.wikipedia.org/wiki/Elecciones_parlamentarias_de_Bolivia_de_1949#Resultados"
 	},
 	{
-		"ids": ["pe"],
-		"country": "Peru",
+		"ids": ["bo"],
+		"country": "Bolivia",
 		"year": 1947,
 		"region": "South America",
 		"img": "https://commons.wikimedia.org/wiki/Special:FilePath/Cámara_de_Diputados_de_Bolivia_elecciones_1947.svg?width=600",
 		"wiki_link": "https://es.wikipedia.org/wiki/Elecciones_generales_de_Bolivia_de_1947#Congreso"
 	},
 	{
-		"ids": ["pe"],
-		"country": "Peru",
+		"ids": ["bo"],
+		"country": "Bolivia",
 		"year": 1944,
 		"region": "South America",
 		"img": "https://commons.wikimedia.org/wiki/Special:FilePath/Asamblea_Constituyente_de_Bolivia_elecciones_1944.svg?width=600",
 		"wiki_link": "https://es.wikipedia.org/wiki/Elecciones_parlamentarias_de_Bolivia_de_1944#Resultados"
 	},
 	{
-		"ids": ["pe"],
-		"country": "Peru",
+		"ids": ["bo"],
+		"country": "Bolivia",
 		"year": 1942,
 		"region": "South America",
 		"img": "https://commons.wikimedia.org/wiki/Special:FilePath/Cámara_de_Diputados_de_Bolivia_elecciones_1942.svg?width=600",
 		"wiki_link": "https://es.wikipedia.org/wiki/Elecciones_parlamentarias_de_Bolivia_de_1942#Resultados"
 	},
 	{
-		"ids": ["pe"],
-		"country": "Peru",
+		"ids": ["bo"],
+		"country": "Bolivia",
 		"year": 1940,
 		"region": "South America",
 		"img": "https://commons.wikimedia.org/wiki/Special:FilePath/Cámara_de_Diputados_de_Bolivia_elecciones_1940.svg?width=600",
 		"wiki_link": "https://es.wikipedia.org/wiki/Elecciones_generales_de_Bolivia_de_1940#Congreso"
 	},
 	{
-		"ids": ["pe"],
-		"country": "Peru",
+		"ids": ["bo"],
+		"country": "Bolivia",
 		"year": 1938,
 		"region": "South America",
 		"img": "https://commons.wikimedia.org/wiki/Special:FilePath/Cámara_de_Diputados_de_Bolivia_elecciones_1938.svg?width=600",
 		"wiki_link": "https://es.wikipedia.org/wiki/Elecciones_parlamentarias_de_Bolivia_de_1938#Resultados"
 	},
 	{
-		"ids": ["pe"],
-		"country": "Peru",
+		"ids": ["bo"],
+		"country": "Bolivia",
 		"year": 1931,
 		"region": "South America",
 		"img": "https://commons.wikimedia.org/wiki/Special:FilePath/Cámara_de_Diputados_de_Bolivia_elecciones_1931.svg?width=600",
