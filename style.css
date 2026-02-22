@@ -142,14 +142,23 @@ h1 { margin: 0; font-size: 1.5rem; letter-spacing: 2px; text-transform: uppercas
 }
 svg { width: 100%; height: 100%; cursor: grab; }
 svg:active { cursor: grabbing; }
-
-path { fill: #d3d3d3; stroke: #111; stroke-width: 0.5px; transition: fill 0.3s; cursor: pointer; }
-path:hover { fill: #bbb; }
-path.regional { fill: var(--partial-yellow) !important; opacity: 0.8; }
-path.wrong { fill: var(--wrong-red) !important; opacity: 0.8; }
+path { 
+    fill: #d3d3d3; 
+    stroke: #111; 
+    stroke-width: 0.5px; 
+    transition: fill 0.2s, filter 0.2s; 
+    cursor: pointer; 
+}
 path.selected { fill: var(--accent-blue) !important; }
+path.regional { fill: var(--partial-yellow) !important; }
+path.wrong { fill: var(--wrong-red) !important; }
 path.correct { fill: var(--correct-green) !important; }
-
+path.is-country-hover { 
+    filter: brightness(0.7) !important; 
+}
+path.is-region-hover:not(.selected):not(.regional):not(.wrong):not(.correct) { 
+    fill: #b8b8b8 !important; 
+}
 .zoom-controls { position: absolute; bottom: 10px; right: 10px; display: flex; flex-direction: column; gap: 5px; }
 .zoom-btn { width: 35px; height: 35px; background: rgba(0,0,0,0.6); color: white; border: 1px solid #555; border-radius: 4px; cursor: pointer; font-size: 20px; display:flex; justify-content:center; align-items:center; }
 

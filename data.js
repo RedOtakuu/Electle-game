@@ -272,7 +272,7 @@ const regionMap = {
 	"North America": ["US", "CA", "MX", "HN", "BZ", "BZ", "SV", "GT", "NI", "PA", "CR", "CU", "JM", "HT", "DO"],
 	"South America": ["CO", "VE", "EC", "PE", "BO", "CL", "AR", "PY", "UY", "BR", "GY", "SR"],
 	"Central Asia": ["KZ", "UZ", "KG", "TJ", "TM"],
-	"East Asia": ["CH", "MN", "TW", "KP", "JP"],
+	"East Asia": ["CH", "MN", "TW", "KP", "KR", "JP"],
 	"South Asia": ["LK", "IN", "NP", "BT", "PK", "AF", "BD", "IR"],
 	"Southeast Asia": ["MM", "TH", "MY", "KH", "LA", "VN", "PH", "ID", "BN"],
 	"Western Asia": ["GE", "AM", "AZ", "TR", "SY", "LB", "PS", "IQ", "JO", "SA", "BH", "AE", "QA", "YE", "OM", "IL", "CY"],
@@ -10567,7 +10567,7 @@ const database = [
 	},
 	
 	{
-		"ids": ["is"],
+		"ids": ["il"],
 		"country": "Israel",
 		"year": 2022,
 		"region": "Western Asia",
@@ -10575,7 +10575,7 @@ const database = [
 		"wiki_link": "https://en.wikipedia.org/wiki/2022_Israeli_legislative_election#Results"
 	},
 	{
-		"ids": ["is"],
+		"ids": ["il"],
 		"country": "Israel",
 		"year": 2021,
 		"region": "Western Asia",
@@ -10583,7 +10583,7 @@ const database = [
 		"wiki_link": "https://en.wikipedia.org/wiki/2021_Israeli_legislative_election#Results"
 	},
 	{
-		"ids": ["is"],
+		"ids": ["il"],
 		"country": "Israel",
 		"year": 2020,
 		"region": "Western Asia",
@@ -10591,7 +10591,7 @@ const database = [
 		"wiki_link": "https://en.wikipedia.org/wiki/2020_Israeli_legislative_election#Results"
 	},
 	{
-		"ids": ["is"],
+		"ids": ["il"],
 		"country": "Israel",
 		"year": 2019,
 		"region": "Western Asia",
@@ -10599,7 +10599,7 @@ const database = [
 		"wiki_link": "https://en.wikipedia.org/wiki/September_2019_Israeli_legislative_election#Results"
 	},
 	{
-		"ids": ["is"],
+		"ids": ["il"],
 		"country": "Israel",
 		"year": 2019,
 		"region": "Western Asia",
@@ -10607,7 +10607,7 @@ const database = [
 		"wiki_link": "https://en.wikipedia.org/wiki/April_2019_Israeli_legislative_election#Results"
 	},
 	{
-		"ids": ["is"],
+		"ids": ["il"],
 		"country": "Israel",
 		"year": 2015,
 		"region": "Western Asia",
@@ -10615,7 +10615,7 @@ const database = [
 		"wiki_link": "https://en.wikipedia.org/wiki/2015_Israeli_legislative_election#Results"
 	},
 	{
-		"ids": ["is"],
+		"ids": ["il"],
 		"country": "Israel",
 		"year": 2013,
 		"region": "Western Asia",
@@ -10623,7 +10623,7 @@ const database = [
 		"wiki_link": "https://en.wikipedia.org/wiki/2013_Israeli_legislative_election#Results"
 	},
 	{
-		"ids": ["is"],
+		"ids": ["il"],
 		"country": "Israel",
 		"year": 2009,
 		"region": "Western Asia",
@@ -10631,7 +10631,7 @@ const database = [
 		"wiki_link": "https://en.wikipedia.org/wiki/2009_Israeli_legislative_election#Results"
 	},
 	{
-		"ids": ["is"],
+		"ids": ["il"],
 		"country": "Israel",
 		"year": 2006,
 		"region": "Western Asia",
@@ -10639,7 +10639,7 @@ const database = [
 		"wiki_link": "https://en.wikipedia.org/wiki/2006_Israeli_legislative_election#Results"
 	},
 	{
-		"ids": ["is"],
+		"ids": ["il"],
 		"country": "Israel",
 		"year": 2003,
 		"region": "Western Asia",
@@ -10647,7 +10647,7 @@ const database = [
 		"wiki_link": "https://en.wikipedia.org/wiki/2003_Israeli_legislative_election#Results"
 	},
 	{
-		"ids": ["is"],
+		"ids": ["il"],
 		"country": "Israel",
 		"year": 1999,
 		"region": "Western Asia",
@@ -10655,7 +10655,7 @@ const database = [
 		"wiki_link": "https://en.wikipedia.org/wiki/1999_Israeli_general_election#Results"
 	},
 	{
-		"ids": ["is"],
+		"ids": ["il"],
 		"country": "Israel",
 		"year": 1996,
 		"region": "Western Asia",
@@ -10663,7 +10663,7 @@ const database = [
 		"wiki_link": "https://en.wikipedia.org/wiki/1996_Israeli_general_election#Results"
 	},
 	{
-		"ids": ["is"],
+		"ids": ["il"],
 		"country": "Israel",
 		"year": 1992,
 		"region": "Western Asia",
@@ -10671,7 +10671,7 @@ const database = [
 		"wiki_link": "https://en.wikipedia.org/wiki/1992_Israeli_legislative_election#Results"
 	},
 	{
-		"ids": ["is"],
+		"ids": ["il"],
 		"country": "Israel",
 		"year": 1988,
 		"region": "Western Asia",
@@ -10679,7 +10679,7 @@ const database = [
 		"wiki_link": "https://en.wikipedia.org/wiki/1988_Israeli_legislative_election#Results"
 	},
 	{
-		"ids": ["is"],
+		"ids": ["il"],
 		"country": "Israel",
 		"year": 1984,
 		"region": "Western Asia",
@@ -10687,7 +10687,7 @@ const database = [
 		"wiki_link": "https://en.wikipedia.org/wiki/1984_Israeli_legislative_election#Results"
 	},
 	{
-		"ids": ["is"],
+		"ids": ["il"],
 		"country": "Israel",
 		"year": 1965,
 		"region": "Western Asia",
@@ -10695,7 +10695,7 @@ const database = [
 		"wiki_link": "https://en.wikipedia.org/wiki/1965_Israeli_legislative_election#Results"
 	},
 	{
-		"ids": ["is"],
+		"ids": ["il"],
 		"country": "Israel",
 		"year": 1961,
 		"region": "Western Asia",
@@ -10703,7 +10703,7 @@ const database = [
 		"wiki_link": "https://en.wikipedia.org/wiki/1961_Israeli_legislative_election#Results"
 	},
 	{
-		"ids": ["is"],
+		"ids": ["il"],
 		"country": "Israel",
 		"year": 1959,
 		"region": "Western Asia",
@@ -10711,7 +10711,7 @@ const database = [
 		"wiki_link": "https://en.wikipedia.org/wiki/1959_Israeli_legislative_election#Results"
 	},
 	{
-		"ids": ["is"],
+		"ids": ["il"],
 		"country": "Israel",
 		"year": 1949,
 		"region": "Western Asia",

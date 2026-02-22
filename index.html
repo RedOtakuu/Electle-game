@@ -178,14 +178,25 @@
 		function resetGameStateUI() {
 			selectedId = null;
 			countryGuessed = false;
-			document.querySelectorAll('path').forEach(p => p.classList.remove('correct', 'wrong', 'regional', 'selected'));
-			document.getElementById('year-input').value = ''; 
-			document.getElementById('year-input').disabled = false;
+			
+			document.querySelectorAll('path').forEach(p => {
+				p.classList.remove('correct', 'wrong', 'regional', 'selected', 'is-country-hover', 'is-region-hover');
+			});
+
+			const yearInput = document.getElementById('year-input');
+			yearInput.value = ''; 
+			yearInput.disabled = false;
+			
+			yearInput.style.borderColor = "";
+			yearInput.style.color = "";
+
+			const statusText = document.getElementById('selected-display');
+			statusText.innerHTML = "Selected: <span>—</span>";
+			
 			document.getElementById('submit-btn').disabled = false;
 			document.getElementById('history').innerHTML = '';
 			document.getElementById('win-modal').classList.remove('visible');
-			document.getElementById('main-timer-box').style.display = 'none';
-			document.getElementById('selected-display').innerHTML = "Selected: <span>—</span>";
+			
 			if(panZoom) panZoom.reset();
 		}
 
@@ -193,6 +204,42 @@
 			const paths = document.querySelectorAll('path');
 			paths.forEach(p => {
 				p.addEventListener('click', () => handleCountrySelect(p));
+
+				p.addEventListener('mouseenter', () => {
+					if (!gameActive || countryGuessed) return;
+					
+					const countryId = p.id.toUpperCase();
+					
+					document.querySelectorAll(`path[id="${countryId}"]`).forEach(el => {
+						el.classList.add('is-country-hover');
+					});
+
+					const isGray = !p.classList.contains('selected') && 
+								   !p.classList.contains('regional') && 
+								   !p.classList.contains('wrong') && 
+								   !p.classList.contains('correct');
+
+					if (isGray) {
+						const region = getRegionByCountryId(p.id);
+						if (region && regionMap[region]) {
+							regionMap[region].forEach(id => {
+								document.querySelectorAll(`path[id="${id.toUpperCase()}"]`).forEach(el => {
+									el.classList.add('is-region-hover');
+								});
+							});
+						}
+					}
+				});
+
+				p.addEventListener('mouseleave', () => {
+					document.querySelectorAll('.is-country-hover').forEach(el => {
+						el.classList.remove('is-country-hover');
+					});
+					document.querySelectorAll('.is-region-hover').forEach(el => {
+						el.classList.remove('is-region-hover');
+					});
+				});
+
 				let startX, startY;
 				p.addEventListener('touchstart', (e) => {
 					if (e.touches.length > 1) return; 
@@ -207,6 +254,33 @@
 					startX = null; startY = null;
 				});
 			});
+		}
+		
+		function handleRegionHover(countryId, isHovering) {
+			if (!gameActive || countryGuessed) return;
+			
+			const regionName = getRegionByCountryId(countryId);
+			if (!regionName) return;
+
+			const regionCountries = regionMap[regionName];
+			if (regionCountries) {
+				regionCountries.forEach(id => {
+					const upperId = id.toUpperCase();
+					document.querySelectorAll(`path[id="${upperId}"]`).forEach(el => {
+						if (!el.classList.contains('correct') && 
+							!el.classList.contains('wrong') && 
+							!el.classList.contains('regional') && 
+							!el.classList.contains('selected')) {
+							
+							if (isHovering) {
+								el.classList.add('region-hover');
+							} else {
+								el.classList.remove('region-hover');
+							}
+						}
+					});
+				});
+			}
 		}
 
 		function getRegionByCountryId(id) {
@@ -314,7 +388,12 @@
 			} else {
 				selectedId = null;
 				statusText.innerHTML = "Selected: <span>—</span>";
-				yearInput.value = "";
+				if (yearDiff !== 0) {
+					yearInput.value = "";
+				} else {
+					yearInput.style.borderColor = "var(--correct-green)";
+					yearInput.style.color = "var(--correct-green)";
+				}
 			}
 		}
 		function showWinModal(instant) {
