@@ -149,8 +149,8 @@ path {
     transition: fill 0.2s, filter 0.2s; 
     cursor: pointer; 
 }
-path.selected { fill: var(--accent-blue) !important; }
 path.regional { fill: var(--partial-yellow) !important; }
+path.selected { fill: var(--accent-blue) !important; }
 path.wrong { fill: var(--wrong-red) !important; }
 path.correct { fill: var(--correct-green) !important; }
 path.is-country-hover { 

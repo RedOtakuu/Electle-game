@@ -1582,80 +1582,80 @@ const database = [
 		"wiki_link": "https://en.wikipedia.org/wiki/1996_Czech_parliamentary_election#Results"
 	},
 	{
-		"ids": ["cz"],
-		"country": "Czechia",
+		"ids": ["cz", "sk"],
+		"country": "Czechoslovakia",
 		"year": 1992,
 		"region": "Eastern Europe",
 		"img": "https://commons.wikimedia.org/wiki/Special:FilePath/House_of_the_People_of_the_Federal_Assembly_of_Czechoslovakia_1992.svg?width=600",
 		"wiki_link": "https://en.wikipedia.org/wiki/1992_Czechoslovak_parliamentary_election#Results"
 	},
 	{
-		"ids": ["cz"],
-		"country": "Czechia",
+		"ids": ["cz", "sk"],
+		"country": "Czechoslovakia",
 		"year": 1990,
 		"region": "Eastern Europe",
 		"img": "https://commons.wikimedia.org/wiki/Special:FilePath/House_of_the_People_of_the_Federal_Assembly_of_Czechoslovakia_1990.svg?width=600",
 		"wiki_link": "https://en.wikipedia.org/wiki/1990_Czechoslovak_parliamentary_election#Results"
 	},
 	{
-		"ids": ["cz"],
-		"country": "Czechia",
+		"ids": ["cz", "sk"],
+		"country": "Czechoslovakia",
 		"year": 1986,
 		"region": "Eastern Europe",
 		"img": "https://commons.wikimedia.org/wiki/Special:FilePath/Czechoslovakia_House_of_the_People_1986.svg?width=600",
 		"wiki_link": "https://en.wikipedia.org/wiki/1986_Czechoslovak_parliamentary_election#Results"
 	},
 	{
-		"ids": ["cz"],
-		"country": "Czechia",
+		"ids": ["cz", "sk"],
+		"country": "Czechoslovakia",
 		"year": 1964,
 		"region": "Eastern Europe",
 		"img": "https://commons.wikimedia.org/wiki/Special:FilePath/Czechoslovakia_National_Assembly_1964.svg?width=600",
 		"wiki_link": "https://en.wikipedia.org/wiki/1964_Czechoslovak_parliamentary_election#Results"
 	},
 	{
-		"ids": ["cz"],
-		"country": "Czechia",
+		"ids": ["cz", "sk"],
+		"country": "Czechoslovakia",
 		"year": 1948,
 		"region": "Eastern Europe",
 		"img": "https://commons.wikimedia.org/wiki/Special:FilePath/National_Assembly_of_Czechoslovakia_1948.svg?width=600",
 		"wiki_link": "https://en.wikipedia.org/wiki/1948_Czechoslovak_parliamentary_election#Results"
 	},
 	{
-		"ids": ["cz"],
-		"country": "Czechia",
+		"ids": ["cz", "sk"],
+		"country": "Czechoslovakia",
 		"year": 1946,
 		"region": "Eastern Europe",
 		"img": "https://commons.wikimedia.org/wiki/Special:FilePath/National_Assembly_of_Czechoslovakia_1946.svg?width=600",
 		"wiki_link": "https://en.wikipedia.org/wiki/1946_Czechoslovak_parliamentary_election#Results"
 	},
 	{
-		"ids": ["cz"],
-		"country": "Czechia",
+		"ids": ["cz", "sk"],
+		"country": "Czechoslovakia",
 		"year": 1935,
 		"region": "Eastern Europe",
 		"img": "https://commons.wikimedia.org/wiki/Special:FilePath/National_Assembly_of_Czechoslovakia_1935.svg?width=600",
 		"wiki_link": "https://en.wikipedia.org/wiki/1935_Czechoslovak_parliamentary_election#Results"
 	},
 	{
-		"ids": ["cz"],
-		"country": "Czechia",
+		"ids": ["cz", "sk"],
+		"country": "Czechoslovakia",
 		"year": 1929,
 		"region": "Eastern Europe",
 		"img": "https://commons.wikimedia.org/wiki/Special:FilePath/National_Assembly_of_Czechoslovakia_1929.svg?width=600",
 		"wiki_link": "https://en.wikipedia.org/wiki/1929_Czechoslovak_parliamentary_election#Chamber_of_Deputies"
 	},
 	{
-		"ids": ["cz"],
-		"country": "Czechia",
+		"ids": ["cz", "sk"],
+		"country": "Czechoslovakia",
 		"year": 1925,
 		"region": "Eastern Europe",
 		"img": "https://commons.wikimedia.org/wiki/Special:FilePath/National_Assembly_of_Czechoslovakia_1925.svg?width=600",
 		"wiki_link": "https://en.wikipedia.org/wiki/1925_Czechoslovak_parliamentary_election#Results"
 	},
 	{
-		"ids": ["cz"],
-		"country": "Czechia",
+		"ids": ["cz", "sk"],
+		"country": "Czechoslovakia",
 		"year": 1920,
 		"region": "Eastern Europe",
 		"img": "https://commons.wikimedia.org/wiki/Special:FilePath/National_Assembly_of_Czechoslovakia_1920.svg?width=600",
@@ -4606,16 +4606,16 @@ const database = [
 		"wiki_link": "https://en.wikipedia.org/wiki/1993_Russian_legislative_election#Results"
 	},
 	{
-		"ids": ["ru"],
-		"country": "Russia",
+		"ids": ["ru", "ua", "by", "ge", "am", "az", "kz", "uz", "kg", "tj", "tm"],
+		"country": "Soviet Union",
 		"year": 1936,
 		"region": "Eastern Europe",
 		"img": "https://commons.wikimedia.org/wiki/Special:FilePath/VIII_All-Union_Congress_of_Soviets.svg?width=600",
 		"wiki_link": "https://en.wikipedia.org/wiki/1936_Soviet_Union_legislative_election#Results"
 	},
 	{
-		"ids": ["ru"],
-		"country": "Russia",
+		"ids": ["ru", "ua", "by", "ge", "am", "az", "kz", "uz", "kg", "tj", "tm"],
+		"country": "Soviet Union",
 		"year": 1922,
 		"region": "Eastern Europe",
 		"img": "https://commons.wikimedia.org/wiki/Special:FilePath/Soviet_Union_All-Union_Congress_of_Soviets_1922.svg?width=600",
