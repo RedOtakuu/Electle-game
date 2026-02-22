@@ -9105,7 +9105,7 @@ const database = [
 		"ids": ["lk"],
 		"country": "Sri Lanka",
 		"year": 2024,
-		"region": "Indostan",
+		"region": "South Asia",
 		"img": "https://commons.wikimedia.org/wiki/Special:FilePath/Sri_Lanka_Parliament_2024.svg?width=600",
 		"wiki_link": "https://en.wikipedia.org/wiki/2024_Sri_Lankan_parliamentary_election"
 	},
@@ -9113,7 +9113,7 @@ const database = [
 		"ids": ["lk"],
 		"country": "Sri Lanka",
 		"year": 2020,
-		"region": "Indostan",
+		"region": "South Asia",
 		"img": "https://commons.wikimedia.org/wiki/Special:FilePath/Sri_Lanka_Parliament_2020.svg?width=600",
 		"wiki_link": "https://en.wikipedia.org/wiki/2020_Sri_Lankan_parliamentary_election"
 	},
@@ -9121,7 +9121,7 @@ const database = [
 		"ids": ["lk"],
 		"country": "Sri Lanka",
 		"year": 2015,
-		"region": "Indostan",
+		"region": "South Asia",
 		"img": "https://commons.wikimedia.org/wiki/Special:FilePath/Sri_Lanka_Parliament_2015.svg?width=600",
 		"wiki_link": "https://en.wikipedia.org/wiki/2015_Sri_Lankan_parliamentary_election"
 	},
@@ -9129,7 +9129,7 @@ const database = [
 		"ids": ["lk"],
 		"country": "Sri Lanka",
 		"year": 2015,
-		"region": "Indostan",
+		"region": "South Asia",
 		"img": "https://commons.wikimedia.org/wiki/Special:FilePath/Sri_Lanka_Parliament_2015.svg?width=600",
 		"wiki_link": "https://en.wikipedia.org/wiki/2015_Sri_Lankan_parliamentary_election"
 	},
@@ -9137,7 +9137,7 @@ const database = [
 		"ids": ["lk"],
 		"country": "Sri Lanka",
 		"year": 1994,
-		"region": "Indostan",
+		"region": "South Asia",
 		"img": "https://commons.wikimedia.org/wiki/Special:FilePath/Sri_Lanka_Parliament_1994.svg?width=600",
 		"wiki_link": "https://en.wikipedia.org/wiki/1994_Sri_Lankan_parliamentary_election"
 	},
@@ -9145,7 +9145,7 @@ const database = [
 		"ids": ["lk"],
 		"country": "Sri Lanka",
 		"year": 1989,
-		"region": "Indostan",
+		"region": "South Asia",
 		"img": "https://commons.wikimedia.org/wiki/Special:FilePath/Sri_Lanka_Parliament_1989.svg?width=600",
 		"wiki_link": "https://en.wikipedia.org/wiki/1989_Sri_Lankan_parliamentary_election"
 	},
@@ -9153,7 +9153,7 @@ const database = [
 		"ids": ["lk"],
 		"country": "Sri Lanka",
 		"year": 1977,
-		"region": "Indostan",
+		"region": "South Asia",
 		"img": "https://commons.wikimedia.org/wiki/Special:FilePath/Sri_Lanka_Parliament_1977.svg?width=600",
 		"wiki_link": "https://en.wikipedia.org/wiki/1977_Sri_Lankan_parliamentary_election"
 	},
@@ -9161,7 +9161,7 @@ const database = [
 		"ids": ["in"],
 		"country": "India",
 		"year": 2024,
-		"region": "Indostan",
+		"region": "South Asia",
 		"img": "https://commons.wikimedia.org/wiki/Special:FilePath/India_18th_Lok_Sabha_Election_Result_2024.svg?width=600",
 		"wiki_link": "https://en.wikipedia.org/wiki/2024_Indian_general_election#Results"
 	},
@@ -9169,7 +9169,7 @@ const database = [
 		"ids": ["in"],
 		"country": "India",
 		"year": 2019,
-		"region": "Indostan",
+		"region": "South Asia",
 		"img": "https://commons.wikimedia.org/wiki/Special:FilePath/Lok_Sabha_Zusammensetzung_2019.svg?width=600",
 		"wiki_link": "https://en.wikipedia.org/wiki/2019_Indian_general_election"
 	},
@@ -9177,7 +9177,7 @@ const database = [
 		"ids": ["in"],
 		"country": "India",
 		"year": 2014,
-		"region": "Indostan",
+		"region": "South Asia",
 		"img": "https://commons.wikimedia.org/wiki/Special:FilePath/Lok_Sabha_Zusammensetzung_2014.svg?width=600",
 		"wiki_link": "https://en.wikipedia.org/wiki/2014_Indian_general_election#Results"
 	},
@@ -9185,7 +9185,7 @@ const database = [
 		"ids": ["in"],
 		"country": "India",
 		"year": 2009,
-		"region": "Indostan",
+		"region": "South Asia",
 		"img": "https://commons.wikimedia.org/wiki/Special:FilePath/Lok_Sabha_Zusammensetzung_2009.svg?width=600",
 		"wiki_link": "https://en.wikipedia.org/wiki/2009_Indian_general_election#Results"
 	},
@@ -9193,7 +9193,7 @@ const database = [
 		"ids": ["in"],
 		"country": "India",
 		"year": 2004,
-		"region": "Indostan",
+		"region": "South Asia",
 		"img": "https://commons.wikimedia.org/wiki/Special:FilePath/Lok_Sabha_Zusammensetzung_2004.svg?width=600",
 		"wiki_link": "https://en.wikipedia.org/wiki/2004_Indian_general_election#Results"
 	},
@@ -9201,7 +9201,7 @@ const database = [
 		"ids": ["in"],
 		"country": "India",
 		"year": 1999,
-		"region": "Indostan",
+		"region": "South Asia",
 		"img": "https://commons.wikimedia.org/wiki/Special:FilePath/Lok_Sabha_Zusammensetzung_1999.svg?width=600",
 		"wiki_link": "https://en.wikipedia.org/wiki/1999_Indian_general_election#Results"
 	},
@@ -9209,7 +9209,7 @@ const database = [
 		"ids": ["in"],
 		"country": "India",
 		"year": 1998,
-		"region": "Indostan",
+		"region": "South Asia",
 		"img": "https://commons.wikimedia.org/wiki/Special:FilePath/Lok_Sabha_Zusammensetzung_1998.svg?width=600",
 		"wiki_link": "https://en.wikipedia.org/wiki/1998_Indian_general_election"
 	},
@@ -9217,7 +9217,7 @@ const database = [
 		"ids": ["in"],
 		"country": "India",
 		"year": 1996,
-		"region": "Indostan",
+		"region": "South Asia",
 		"img": "https://commons.wikimedia.org/wiki/Special:FilePath/Lok_Sabha_Zusammensetzung_1996.svg?width=600",
 		"wiki_link": "https://en.wikipedia.org/wiki/1996_Indian_general_election"
 	},
@@ -9225,7 +9225,7 @@ const database = [
 		"ids": ["in"],
 		"country": "India",
 		"year": 1991,
-		"region": "Indostan",
+		"region": "South Asia",
 		"img": "https://commons.wikimedia.org/wiki/Special:FilePath/Lok_Sabha_Zusammensetzung_1991.svg?width=600",
 		"wiki_link": "https://en.wikipedia.org/wiki/1991_Indian_general_election#Results"
 	},
@@ -9233,7 +9233,7 @@ const database = [
 		"ids": ["in"],
 		"country": "India",
 		"year": 1989,
-		"region": "Indostan",
+		"region": "South Asia",
 		"img": "https://commons.wikimedia.org/wiki/Special:FilePath/Lok_Sabha_Zusammensetzung_1989.svg?width=600",
 		"wiki_link": "https://en.wikipedia.org/wiki/1989_Indian_general_election"
 	},
@@ -9241,7 +9241,7 @@ const database = [
 		"ids": ["in"],
 		"country": "India",
 		"year": 1984,
-		"region": "Indostan",
+		"region": "South Asia",
 		"img": "https://commons.wikimedia.org/wiki/Special:FilePath/Lok_Sabha_Zusammensetzung_1984.svg?width=600",
 		"wiki_link": "https://en.wikipedia.org/wiki/1984_Indian_general_election"
 	},
@@ -9249,7 +9249,7 @@ const database = [
 		"ids": ["in"],
 		"country": "India",
 		"year": 1980,
-		"region": "Indostan",
+		"region": "South Asia",
 		"img": "https://commons.wikimedia.org/wiki/Special:FilePath/Lok_Sabha_Zusammensetzung_1980.svg?width=600",
 		"wiki_link": "https://en.wikipedia.org/wiki/1980_Indian_general_election"
 	},
@@ -9257,7 +9257,7 @@ const database = [
 		"ids": ["in"],
 		"country": "India",
 		"year": 1977,
-		"region": "Indostan",
+		"region": "South Asia",
 		"img": "https://commons.wikimedia.org/wiki/Special:FilePath/Lok_Sabha_Zusammensetzung_1977.svg?width=600",
 		"wiki_link": "https://en.wikipedia.org/wiki/1977_Indian_general_election"
 	},
@@ -9265,7 +9265,7 @@ const database = [
 		"ids": ["in"],
 		"country": "India",
 		"year": 1971,
-		"region": "Indostan",
+		"region": "South Asia",
 		"img": "https://commons.wikimedia.org/wiki/Special:FilePath/Lok_Sabha_Zusammensetzung_1971.svg?width=600",
 		"wiki_link": "https://en.wikipedia.org/wiki/1971_Indian_general_election"
 	},
@@ -9273,7 +9273,7 @@ const database = [
 		"ids": ["in"],
 		"country": "India",
 		"year": 1967,
-		"region": "Indostan",
+		"region": "South Asia",
 		"img": "https://commons.wikimedia.org/wiki/Special:FilePath/Lok_Sabha_Zusammensetzung_1967.svg?width=600",
 		"wiki_link": "https://en.wikipedia.org/wiki/1967_Indian_general_election"
 	},
@@ -9281,7 +9281,7 @@ const database = [
 		"ids": ["in"],
 		"country": "India",
 		"year": 1962,
-		"region": "Indostan",
+		"region": "South Asia",
 		"img": "https://commons.wikimedia.org/wiki/Special:FilePath/Lok_Sabha_Zusammensetzung_1962.svg?width=600",
 		"wiki_link": "https://en.wikipedia.org/wiki/1962_Indian_general_election"
 	},
@@ -9289,7 +9289,7 @@ const database = [
 		"ids": ["in"],
 		"country": "India",
 		"year": 1957,
-		"region": "Indostan",
+		"region": "South Asia",
 		"img": "https://commons.wikimedia.org/wiki/Special:FilePath/Lok_Sabha_Zusammensetzung_1957.svg?width=600",
 		"wiki_link": "https://en.wikipedia.org/wiki/1957_Indian_general_election"
 	},
@@ -9297,7 +9297,7 @@ const database = [
 		"ids": ["in"],
 		"country": "India",
 		"year": 1952,
-		"region": "Indostan",
+		"region": "South Asia",
 		"img": "https://commons.wikimedia.org/wiki/Special:FilePath/Lok_Sabha_Zusammensetzung_1952.svg?width=600",
 		"wiki_link": "https://en.wikipedia.org/wiki/1951–52_Indian_general_election"
 	},
@@ -9305,7 +9305,7 @@ const database = [
 		"ids": ["in"],
 		"country": "India",
 		"year": 1946,
-		"region": "Indostan",
+		"region": "South Asia",
 		"img": "https://commons.wikimedia.org/wiki/Special:FilePath/India_Constituent_Assembly_1946.svg?width=600",
 		"wiki_link": "https://en.wikipedia.org/wiki/1946_Indian_Constituent_Assembly_election"
 	},
@@ -9313,7 +9313,7 @@ const database = [
 		"ids": ["np"],
 		"country": "Nepal",
 		"year": 2022,
-		"region": "Indostan",
+		"region": "South Asia",
 		"img": "https://commons.wikimedia.org/wiki/Special:FilePath/Nepalese_House_of_Representatives_2022.svg?width=600",
 		"wiki_link": "https://en.wikipedia.org/wiki/2022_Nepalese_general_election"
 	},
@@ -9321,7 +9321,7 @@ const database = [
 		"ids": ["np"],
 		"country": "Nepal",
 		"year": 2008,
-		"region": "Indostan",
+		"region": "South Asia",
 		"img": "https://commons.wikimedia.org/wiki/Special:FilePath/Nepal_Constituent_Assembly_2008.svg?width=600",
 		"wiki_link": "https://en.wikipedia.org/wiki/2008_Nepalese_Constituent_Assembly_election#Results"
 	},
@@ -9329,7 +9329,7 @@ const database = [
 		"ids": ["np"],
 		"country": "Nepal",
 		"year": 1999,
-		"region": "Indostan",
+		"region": "South Asia",
 		"img": "https://commons.wikimedia.org/wiki/Special:FilePath/Nepal_PratinidhiSabha_1999.svg?width=600",
 		"wiki_link": "https://en.wikipedia.org/wiki/1999_Nepalese_general_election"
 	},
@@ -9337,7 +9337,7 @@ const database = [
 		"ids": ["np"],
 		"country": "Nepal",
 		"year": 1994,
-		"region": "Indostan",
+		"region": "South Asia",
 		"img": "https://commons.wikimedia.org/wiki/Special:FilePath/Nepal_PratinidhiSabha_1994.svg?width=600",
 		"wiki_link": "https://en.wikipedia.org/wiki/1994_Nepalese_general_election"
 	},
@@ -9345,7 +9345,7 @@ const database = [
 		"ids": ["np"],
 		"country": "Nepal",
 		"year": 1994,
-		"region": "Indostan",
+		"region": "South Asia",
 		"img": "https://commons.wikimedia.org/wiki/Special:FilePath/Nepal_PratinidhiSabha_1994.svg?width=600",
 		"wiki_link": "https://en.wikipedia.org/wiki/1994_Nepalese_general_election"
 	},
@@ -9353,7 +9353,7 @@ const database = [
 		"ids": ["np"],
 		"country": "Nepal",
 		"year": 1959,
-		"region": "Indostan",
+		"region": "South Asia",
 		"img": "https://commons.wikimedia.org/wiki/Special:FilePath/Pratinidhi_Sabha,_Nepal,_1959.svg?width=600",
 		"wiki_link": "https://en.wikipedia.org/wiki/1959_Nepalese_general_election"
 	},
@@ -9361,7 +9361,7 @@ const database = [
 		"ids": ["bt"],
 		"country": "Bhutan",
 		"year": 2024,
-		"region": "Indostan",
+		"region": "South Asia",
 		"img": "https://commons.wikimedia.org/wiki/Special:FilePath/Bhoutan_Assemblée_nationale_2024.svg?width=600",
 		"wiki_link": "https://en.wikipedia.org/wiki/2023–24_Bhutanese_National_Assembly_election"
 	},
@@ -9369,7 +9369,7 @@ const database = [
 		"ids": ["bt"],
 		"country": "Bhutan",
 		"year": 2018,
-		"region": "Indostan",
+		"region": "South Asia",
 		"img": "https://commons.wikimedia.org/wiki/Special:FilePath/2018_Assemblee_nationale_du_Bhoutan.svg?width=600",
 		"wiki_link": "https://en.wikipedia.org/wiki/2018_Bhutanese_National_Assembly_election"
 	},
@@ -9377,7 +9377,7 @@ const database = [
 		"ids": ["bt"],
 		"country": "Bhutan",
 		"year": 2013,
-		"region": "Indostan",
+		"region": "South Asia",
 		"img": "https://commons.wikimedia.org/wiki/Special:FilePath/2013_National_Assembly_of_Bhutan_Seat_Composition.svg?width=600",
 		"wiki_link": "https://en.wikipedia.org/wiki/2013_Bhutanese_National_Assembly_election"
 	},
@@ -9385,7 +9385,7 @@ const database = [
 		"ids": ["bt"],
 		"country": "Bhutan",
 		"year": 2008,
-		"region": "Indostan",
+		"region": "South Asia",
 		"img": "https://commons.wikimedia.org/wiki/Special:FilePath/Assemblee_nationale_bhoutan_2008.svg?width=600",
 		"wiki_link": "https://en.wikipedia.org/wiki/2008_Bhutanese_National_Assembly_election"
 	},
@@ -9394,7 +9394,7 @@ const database = [
 		"ids": ["pk"],
 		"country": "Pakistan",
 		"year": 2024,
-		"region": "Indostan",
+		"region": "South Asia",
 		"img": "https://commons.wikimedia.org/wiki/Special:FilePath/16th_National_Assembly_(Pakistan).svg?width=600",
 		"wiki_link": "https://en.wikipedia.org/wiki/2024_Pakistani_general_election#Results"
 	},
@@ -9402,7 +9402,7 @@ const database = [
 		"ids": ["pk"],
 		"country": "Pakistan",
 		"year": 2018,
-		"region": "Indostan",
+		"region": "South Asia",
 		"img": "https://commons.wikimedia.org/wiki/Special:FilePath/Pakistan_National_Assembly_2018_with_reserved.svg?width=600",
 		"wiki_link": "https://en.wikipedia.org/wiki/2018_Pakistani_general_election#Results"
 	},
@@ -9410,7 +9410,7 @@ const database = [
 		"ids": ["pk"],
 		"country": "Pakistan",
 		"year": 2013,
-		"region": "Indostan",
+		"region": "South Asia",
 		"img": "https://commons.wikimedia.org/wiki/Special:FilePath/PakistanElection2013Diagram.svg?width=600",
 		"wiki_link": "https://en.wikipedia.org/wiki/2013_Pakistani_general_election#Results"
 	},
@@ -9418,7 +9418,7 @@ const database = [
 		"ids": ["pk"],
 		"country": "Pakistan",
 		"year": 2008,
-		"region": "Indostan",
+		"region": "South Asia",
 		"img": "https://commons.wikimedia.org/wiki/Special:FilePath/National_Assembly_of_Pakistan_2008.svg?width=600",
 		"wiki_link": "https://en.wikipedia.org/wiki/2008_Pakistani_general_election#Results"
 	},
@@ -9426,7 +9426,7 @@ const database = [
 		"ids": ["pk"],
 		"country": "Pakistan",
 		"year": 2002,
-		"region": "Indostan",
+		"region": "South Asia",
 		"img": "https://commons.wikimedia.org/wiki/Special:FilePath/Pakistan_National_Assembly_2002.svg?width=600",
 		"wiki_link": "https://en.wikipedia.org/wiki/2002_Pakistani_general_election#Results"
 	},
@@ -9434,7 +9434,7 @@ const database = [
 		"ids": ["pk"],
 		"country": "Pakistan",
 		"year": 1985,
-		"region": "Indostan",
+		"region": "South Asia",
 		"img": "https://commons.wikimedia.org/wiki/Special:FilePath/Pakistan_National_Assembly_1985.svg?width=600",
 		"wiki_link": "https://en.wikipedia.org/wiki/1985_Pakistani_general_election#Results"
 	},
@@ -9442,7 +9442,7 @@ const database = [
 		"ids": ["pk"],
 		"country": "Pakistan",
 		"year": 1977,
-		"region": "Indostan",
+		"region": "South Asia",
 		"img": "https://commons.wikimedia.org/wiki/Special:FilePath/Pakistan_National_Assembly_1977.svg?width=600",
 		"wiki_link": "https://en.wikipedia.org/wiki/1977_Pakistani_general_election#Results"
 	},
@@ -9450,7 +9450,7 @@ const database = [
 		"ids": ["pk"],
 		"country": "Pakistan",
 		"year": 1977,
-		"region": "Indostan",
+		"region": "South Asia",
 		"img": "https://commons.wikimedia.org/wiki/Special:FilePath/Pakistan_National_Assembly_1977.svg?width=600",
 		"wiki_link": "https://en.wikipedia.org/wiki/1977_Pakistani_general_election#Results"
 	},
@@ -9458,7 +9458,7 @@ const database = [
 		"ids": ["pk"],
 		"country": "Pakistan",
 		"year": 1970,
-		"region": "Indostan",
+		"region": "South Asia",
 		"img": "https://commons.wikimedia.org/wiki/Special:FilePath/Pakistan_National_Assembly_1970.svg?width=600",
 		"wiki_link": "https://en.wikipedia.org/wiki/1970_Pakistani_general_election#Results"
 	},
@@ -9466,7 +9466,7 @@ const database = [
 		"ids": ["pk"],
 		"country": "Pakistan",
 		"year": 1955,
-		"region": "Indostan",
+		"region": "South Asia",
 		"img": "https://commons.wikimedia.org/wiki/Special:FilePath/1955_Pakistani_Constituent_Assembly_diagram.svg?width=600",
 		"wiki_link": "https://en.wikipedia.org/wiki/1955_Pakistani_Constituent_Assembly_election#Results"
 	},
@@ -9474,7 +9474,7 @@ const database = [
 		"ids": ["pk"],
 		"country": "Pakistan",
 		"year": 1947,
-		"region": "Indostan",
+		"region": "South Asia",
 		"img": "https://commons.wikimedia.org/wiki/Special:FilePath/Pakistan_Constituent_Assembly_1947.svg?width=600",
 		"wiki_link": "https://en.wikipedia.org/wiki/1947_Pakistani_Constituent_Assembly_election#Results"
 	},
@@ -9483,7 +9483,7 @@ const database = [
 		"ids": ["af"],
 		"country": "Afghanistan",
 		"year": 2010,
-		"region": "Indostan",
+		"region": "South Asia",
 		"img": "https://commons.wikimedia.org/wiki/Special:FilePath/Wolesi_Jirga_2010.svg?width=600",
 		"wiki_link": "https://en.wikipedia.org/wiki/2005_Afghan_parliamentary_election#Results"
 	},
@@ -9491,7 +9491,7 @@ const database = [
 		"ids": ["af"],
 		"country": "Afghanistan",
 		"year": 2005,
-		"region": "Indostan",
+		"region": "South Asia",
 		"img": "https://commons.wikimedia.org/wiki/Special:FilePath/Wolesi_Jirga_2005.svg?width=600",
 		"wiki_link": "https://en.wikipedia.org/wiki/2010_Afghan_parliamentary_election#Party_results"
 	},
@@ -9499,7 +9499,7 @@ const database = [
 		"ids": ["af"],
 		"country": "Afghanistan",
 		"year": 1988,
-		"region": "Indostan",
+		"region": "South Asia",
 		"img": "https://commons.wikimedia.org/wiki/Special:FilePath/1988_Afghan_parliamentary_election.svg?width=600",
 		"wiki_link": "https://en.wikipedia.org/wiki/1988_Afghan_parliamentary_election#Results"
 	},
@@ -9508,7 +9508,7 @@ const database = [
 		"ids": ["bd"],
 		"country": "Bangladesh",
 		"year": 2026,
-		"region": "Indostan",
+		"region": "South Asia",
 		"img": "https://commons.wikimedia.org/wiki/Special:FilePath/Bangladesh_13th_Jatiya_Sangsad_Partywise_2026.svg?width=600",
 		"wiki_link": "https://en.wikipedia.org/wiki/2026_Bangladeshi_general_election#Results"
 	},
@@ -9516,7 +9516,7 @@ const database = [
 		"ids": ["bd"],
 		"country": "Bangladesh",
 		"year": 2024,
-		"region": "Indostan",
+		"region": "South Asia",
 		"img": "https://commons.wikimedia.org/wiki/Special:FilePath/2024BDelectionresults.svg?width=600",
 		"wiki_link": "https://en.wikipedia.org/wiki/2024_Bangladeshi_general_election#Results"
 	},
@@ -9524,7 +9524,7 @@ const database = [
 		"ids": ["bd"],
 		"country": "Bangladesh",
 		"year": 2018,
-		"region": "Indostan",
+		"region": "South Asia",
 		"img": "https://commons.wikimedia.org/wiki/Special:FilePath/Jatiya_Sangsad_2018.svg?width=600",
 		"wiki_link": "https://en.wikipedia.org/wiki/2018_Bangladeshi_general_election#Results"
 	},
@@ -9532,7 +9532,7 @@ const database = [
 		"ids": ["bd"],
 		"country": "Bangladesh",
 		"year": 2014,
-		"region": "Indostan",
+		"region": "South Asia",
 		"img": "https://commons.wikimedia.org/wiki/Special:FilePath/Bangladesh_Jatiya_Sangsad_2014.svg?width=600",
 		"wiki_link": "https://en.wikipedia.org/wiki/2014_Bangladeshi_general_election#Results"
 	},
@@ -9540,7 +9540,7 @@ const database = [
 		"ids": ["bd"],
 		"country": "Bangladesh",
 		"year": 2008,
-		"region": "Indostan",
+		"region": "South Asia",
 		"img": "https://commons.wikimedia.org/wiki/Special:FilePath/Bangladesh_Jatiya_Sangsad_by_party_2008.svg?width=600",
 		"wiki_link": "https://en.wikipedia.org/wiki/2008_Bangladeshi_general_election#Results"
 	},
@@ -9548,7 +9548,7 @@ const database = [
 		"ids": ["bd"],
 		"country": "Bangladesh",
 		"year": 2001,
-		"region": "Indostan",
+		"region": "South Asia",
 		"img": "https://commons.wikimedia.org/wiki/Special:FilePath/Jatiya_Sangsad_2001.svg?width=600",
 		"wiki_link": "https://en.wikipedia.org/wiki/2001_Bangladeshi_general_election#Results"
 	},
@@ -9556,7 +9556,7 @@ const database = [
 		"ids": ["bd"],
 		"country": "Bangladesh",
 		"year": 1996,
-		"region": "Indostan",
+		"region": "South Asia",
 		"img": "https://commons.wikimedia.org/wiki/Special:FilePath/Bangladesh_June_Parliament_1996.svg?width=600",
 		"wiki_link": "https://en.wikipedia.org/wiki/June_1996_Bangladeshi_general_election#Results"
 	},
@@ -9564,7 +9564,7 @@ const database = [
 		"ids": ["bd"],
 		"country": "Bangladesh",
 		"year": 1996,
-		"region": "Indostan",
+		"region": "South Asia",
 		"img": "https://commons.wikimedia.org/wiki/Special:FilePath/Bangladesh_Jatiya_Sangsad_February_1996.svg?width=600",
 		"wiki_link": "https://en.wikipedia.org/wiki/February_1996_Bangladeshi_general_election#Results"
 	},
@@ -9572,7 +9572,7 @@ const database = [
 		"ids": ["bd"],
 		"country": "Bangladesh",
 		"year": 1991,
-		"region": "Indostan",
+		"region": "South Asia",
 		"img": "https://commons.wikimedia.org/wiki/Special:FilePath/Jatiya_Sangsad_1991.svg?width=600",
 		"wiki_link": "https://en.wikipedia.org/wiki/1991_Bangladeshi_general_election#Results"
 	},
@@ -9580,7 +9580,7 @@ const database = [
 		"ids": ["bd"],
 		"country": "Bangladesh",
 		"year": 1988,
-		"region": "Indostan",
+		"region": "South Asia",
 		"img": "https://commons.wikimedia.org/wiki/Special:FilePath/Bangladesh_Parliament_1988.svg?width=600",
 		"wiki_link": "https://en.wikipedia.org/wiki/1988_Bangladeshi_general_election#Results"
 	},
@@ -9588,7 +9588,7 @@ const database = [
 		"ids": ["bd"],
 		"country": "Bangladesh",
 		"year": 1986,
-		"region": "Indostan",
+		"region": "South Asia",
 		"img": "https://commons.wikimedia.org/wiki/Special:FilePath/Bangladesh_Jatiya_Sangsad_1986.svg?width=600",
 		"wiki_link": "https://en.wikipedia.org/wiki/1986_Bangladeshi_general_election#Results"
 	},
@@ -9596,7 +9596,7 @@ const database = [
 		"ids": ["bd"],
 		"country": "Bangladesh",
 		"year": 1979,
-		"region": "Indostan",
+		"region": "South Asia",
 		"img": "https://commons.wikimedia.org/wiki/Special:FilePath/Bangladesh_Jatiya_Sangsad_1979.svg?width=600",
 		"wiki_link": "https://en.wikipedia.org/wiki/1979_Bangladeshi_general_election#Results"
 	},
@@ -9604,7 +9604,7 @@ const database = [
 		"ids": ["bd"],
 		"country": "Bangladesh",
 		"year": 1973,
-		"region": "Indostan",
+		"region": "South Asia",
 		"img": "https://commons.wikimedia.org/wiki/Special:FilePath/Bangladesh_Jatiya_Sangsad_1973.svg?width=600",
 		"wiki_link": "https://en.wikipedia.org/wiki/1973_Bangladeshi_general_election#Results"
 	},
@@ -9612,7 +9612,7 @@ const database = [
 		"ids": ["bd"],
 		"country": "Bangladesh",
 		"year": 1970,
-		"region": "Indostan",
+		"region": "South Asia",
 		"img": "https://commons.wikimedia.org/wiki/Special:FilePath/1970_East_Pakistan_Provincial_Assembly.svg?width=600",
 		"wiki_link": "https://en.wikipedia.org/wiki/1970_East_Pakistan_Provincial_Assembly_election#Results"
 	},
@@ -10157,7 +10157,7 @@ const database = [
 		"ids": ["ir"],
 		"country": "Iran",
 		"year": 2024,
-		"region": "Southeast Asia",
+		"region": "South Asia",
 		"img": "https://commons.wikimedia.org/wiki/Special:FilePath/Iran_Majlis_2024.svg?width=600",
 		"wiki_link": "https://fr.wikipedia.org/wiki/%C3%89lections_l%C3%A9gislatives_iraniennes_de_2024#R%C3%A9sultats"
 	},
@@ -10165,7 +10165,7 @@ const database = [
 		"ids": ["ir"],
 		"country": "Iran",
 		"year": 2020,
-		"region": "Southeast Asia",
+		"region": "South Asia",
 		"img": "https://commons.wikimedia.org/wiki/Special:FilePath/Iranian_Parliament_2020.svg?width=600",
 		"wiki_link": "https://el.wikipedia.org/wiki/%CE%99%CF%81%CE%B1%CE%BD%CE%B9%CE%BA%CE%AD%CF%82_%CE%B2%CE%BF%CF%85%CE%BB%CE%B5%CF%85%CF%84%CE%B9%CE%BA%CE%AD%CF%82_%CE%B5%CE%BA%CE%BB%CE%BF%CE%B3%CE%AD%CF%82_2020#%CE%91%CF%80%CE%BF%CF%84%CE%B5%CE%BB%CE%AD%CF%83%CE%BC%CE%B1%CF%84%CE%B1"
 	},
@@ -10173,7 +10173,7 @@ const database = [
 		"ids": ["ir"],
 		"country": "Iran",
 		"year": 2016,
-		"region": "Southeast Asia",
+		"region": "South Asia",
 		"img": "https://commons.wikimedia.org/wiki/Special:FilePath/Islamic_Consultative_Assembly_of_Iran_following_the_2016_elections.svg?width=600",
 		"wiki_link": "https://en.wikipedia.org/wiki/2016_Iranian_legislative_election#Results"
 	},
@@ -10181,7 +10181,7 @@ const database = [
 		"ids": ["ir"],
 		"country": "Iran",
 		"year": 2016,
-		"region": "Southeast Asia",
+		"region": "South Asia",
 		"img": "https://commons.wikimedia.org/wiki/Special:FilePath/Islamic_Consultative_Assembly_of_Iran_following_the_2016_elections.svg?width=600",
 		"wiki_link": "https://en.wikipedia.org/wiki/2016_Iranian_legislative_election#Results"
 	},
@@ -10189,7 +10189,7 @@ const database = [
 		"ids": ["ir"],
 		"country": "Iran",
 		"year": 2008,
-		"region": "Southeast Asia",
+		"region": "South Asia",
 		"img": "https://commons.wikimedia.org/wiki/Special:FilePath/Islamic_Consultative_Assembly_of_Iran_following_the_2008_elections.svg?width=600",
 		"wiki_link": "https://en.wikipedia.org/wiki/2008_Iranian_legislative_election"
 	},
@@ -10197,7 +10197,7 @@ const database = [
 		"ids": ["ir"],
 		"country": "Iran",
 		"year": 2004,
-		"region": "Southeast Asia",
+		"region": "South Asia",
 		"img": "https://commons.wikimedia.org/wiki/Special:FilePath/National_Consultative_Assembly_of_Iran_following_the_2004_elections.svg?width=600",
 		"wiki_link": "https://en.wikipedia.org/wiki/2004_Iranian_legislative_election#Results"
 	},
@@ -10205,7 +10205,7 @@ const database = [
 		"ids": ["ir"],
 		"country": "Iran",
 		"year": 2000,
-		"region": "Southeast Asia",
+		"region": "South Asia",
 		"img": "https://commons.wikimedia.org/wiki/Special:FilePath/6th_Parliament.svg?width=600",
 		"wiki_link": "https://en.wikipedia.org/wiki/2000_Iranian_legislative_election"
 	},
@@ -10213,7 +10213,7 @@ const database = [
 		"ids": ["ir"],
 		"country": "Iran",
 		"year": 1996,
-		"region": "Southeast Asia",
+		"region": "South Asia",
 		"img": "https://commons.wikimedia.org/wiki/Special:FilePath/National_Consultative_Assembly_of_Iran_following_the_1996_election.svg?width=600",
 		"wiki_link": "https://en.wikipedia.org/wiki/1996_Iranian_legislative_election"
 	},
@@ -10221,7 +10221,7 @@ const database = [
 		"ids": ["ir"],
 		"country": "Iran",
 		"year": 1988,
-		"region": "Southeast Asia",
+		"region": "South Asia",
 		"img": "https://commons.wikimedia.org/wiki/Special:FilePath/National_Consultative_Assembly_of_Iran_following_the_1988_election.svg?width=600",
 		"wiki_link": "https://en.wikipedia.org/wiki/1988_Iranian_legislative_election"
 	},
@@ -10229,7 +10229,7 @@ const database = [
 		"ids": ["ir"],
 		"country": "Iran",
 		"year": 1984,
-		"region": "Southeast Asia",
+		"region": "South Asia",
 		"img": "https://commons.wikimedia.org/wiki/Special:FilePath/National_Consultative_Assembly_of_Iran_following_the_1984_election.svg?width=600",
 		"wiki_link": "https://en.wikipedia.org/wiki/1984_Iranian_legislative_election#Results"
 	},
@@ -10237,7 +10237,7 @@ const database = [
 		"ids": ["ir"],
 		"country": "Iran",
 		"year": 1980,
-		"region": "Southeast Asia",
+		"region": "South Asia",
 		"img": "https://commons.wikimedia.org/wiki/Special:FilePath/1980_Iranian_legislative_election.svg?width=600",
 		"wiki_link": "https://en.wikipedia.org/wiki/1984_Iranian_legislative_election#Results"
 	},
@@ -10245,7 +10245,7 @@ const database = [
 		"ids": ["ir"],
 		"country": "Iran",
 		"year": 1971,
-		"region": "Southeast Asia",
+		"region": "South Asia",
 		"img": "https://commons.wikimedia.org/wiki/Special:FilePath/National_Consultative_Assembly_of_Iran_following_the_1971_election.svg?width=600",
 		"wiki_link": "https://en.wikipedia.org/wiki/1971_Iranian_general_election#Results"
 	},
@@ -10253,7 +10253,7 @@ const database = [
 		"ids": ["ir"],
 		"country": "Iran",
 		"year": 1961,
-		"region": "Southeast Asia",
+		"region": "South Asia",
 		"img": "https://commons.wikimedia.org/wiki/Special:FilePath/National_Consultative_Assembly_of_Iran_following_the_1961_election.svg?width=600",
 		"wiki_link": "https://en.wikipedia.org/wiki/1961_Iranian_legislative_election#Results"
 	},
@@ -10261,7 +10261,7 @@ const database = [
 		"ids": ["ir"],
 		"country": "Iran",
 		"year": 1952,
-		"region": "Southeast Asia",
+		"region": "South Asia",
 		"img": "https://commons.wikimedia.org/wiki/Special:FilePath/1952_Iranian_legislative_election.svg?width=600",
 		"wiki_link": "https://en.wikipedia.org/wiki/1952_Iranian_legislative_election"
 	},
@@ -10269,7 +10269,7 @@ const database = [
 		"ids": ["ir"],
 		"country": "Iran",
 		"year": 1947,
-		"region": "Southeast Asia",
+		"region": "South Asia",
 		"img": "https://commons.wikimedia.org/wiki/Special:FilePath/Parliament_1947.svg?width=600",
 		"wiki_link": "https://en.wikipedia.org/wiki/1947_Iranian_legislative_election"
 	},
@@ -10277,7 +10277,7 @@ const database = [
 		"ids": ["ir"],
 		"country": "Iran",
 		"year": 1944,
-		"region": "Southeast Asia",
+		"region": "South Asia",
 		"img": "https://commons.wikimedia.org/wiki/Special:FilePath/Iranian_Parliament_1944–1946.svg?width=600",
 		"wiki_link": "https://en.wikipedia.org/wiki/1943%E2%80%9344_Iranian_legislative_election#Results"
 	},
@@ -10285,7 +10285,7 @@ const database = [
 		"ids": ["ir"],
 		"country": "Iran",
 		"year": 1928,
-		"region": "Southeast Asia",
+		"region": "South Asia",
 		"img": "https://commons.wikimedia.org/wiki/Special:FilePath/Parliament_1928.svg?width=600",
 		"wiki_link": "https://en.wikipedia.org/wiki/1928_Persian_legislative_election"
 	},
@@ -10293,7 +10293,7 @@ const database = [
 		"ids": ["ir"],
 		"country": "Iran",
 		"year": 1923,
-		"region": "Southeast Asia",
+		"region": "South Asia",
 		"img": "https://commons.wikimedia.org/wiki/Special:FilePath/Parliament_1923.svg?width=600",
 		"wiki_link": "https://en.wikipedia.org/wiki/1923_Persian_legislative_election"
 	},
@@ -10301,7 +10301,7 @@ const database = [
 		"ids": ["ir"],
 		"country": "Iran",
 		"year": 1914,
-		"region": "Southeast Asia",
+		"region": "South Asia",
 		"img": "https://commons.wikimedia.org/wiki/Special:FilePath/Parliament_1914.svg?width=600",
 		"wiki_link": "https://en.wikipedia.org/wiki/1914_Persian_legislative_election"
 	},
