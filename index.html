@@ -2,12 +2,13 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Electle - Daily Parliament</title>
     
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🏛️</text></svg>">
 
-    <script src="https://cdn.jsdelivr.net/npm/svg-pan-zoom@3.6.1/dist/svg-pan-zoom.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/svg-pan-zoom@3.6.1/dist/svg-pan-zoom.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.8/hammer.min.js"></script>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -64,6 +65,7 @@
             </div>
             <div style="font-size: 0.8em; text-transform: uppercase; color: #888; margin-top: 15px;">Next Game In</div>
             <div class="countdown-text" style="font-size: 1.5rem; font-weight: bold; font-family: monospace; margin-top: 5px;">00:00:00</div>
+			<button id="share-btn" class="share-btn" onclick="shareResults()">📤 SHARE</button>
 			<button id="next-round-btn" onclick="nextRound()">⏭ NEXT ROUND</button>
         </div>
     </div>
@@ -77,6 +79,9 @@
 		</button>
 		<button class="menu-btn" onclick="startGame('endless')">
 			♾️ Endless Mode
+		</button>
+		<button class="menu-btn" onclick="startGame('easy')" style="background: #2a4d69; border-color: #4a90e2;">
+			👶 Easy Mode
 		</button>
 
         <a href="https://x.com/RedOtakuuu" target="_blank" class="social-link">
@@ -95,6 +100,55 @@
 		let gameActive = false;
 		let currentMode = 'daily';
 		let countryGuessed = false;
+		let easyDatabaseCache = null;
+
+		const mobileEventsHandler = {
+			haltEventListeners: ['touchstart', 'touchend', 'touchmove', 'touchleave', 'touchcancel'],
+			init: function(options) {
+				let instance = options.instance, initialScale = 1, pannedX = 0, pannedY = 0;
+				
+				this.hammer = new Hammer(options.svgElement, {
+				  recognizers: [
+					[Hammer.Pinch, { enable: true }],
+					[Hammer.Pan, { direction: Hammer.DIRECTION_ALL }]
+				  ]
+				});
+
+				this.hammer.on('panstart panmove', function(ev){
+				  if (ev.type === 'panstart') { pannedX = 0; pannedY = 0; }
+				  instance.panBy({x: ev.deltaX - pannedX, y: ev.deltaY - pannedY});
+				  pannedX = ev.deltaX; pannedY = ev.deltaY;
+				});
+
+				this.hammer.on('pinchstart pinchmove', function(ev){
+				  if (ev.type === 'pinchstart') {
+					initialScale = instance.getZoom();
+				  }
+				  instance.zoomAtPoint(initialScale * ev.scale, {x: ev.center.x, y: ev.center.y});
+				});
+			},
+			destroy: function(){
+				this.hammer.destroy();
+			}
+		};
+		
+		function getEasyDatabase() {
+			if (easyDatabaseCache) return easyDatabaseCache;
+			
+			const latestParliaments = {};
+			
+			for (let i = 0; i < database.length; i++) {
+				const item = database[i];
+				const countryKey = item.country;
+				
+				if (!latestParliaments[countryKey] || item.year > latestParliaments[countryKey].year) {
+					latestParliaments[countryKey] = item;
+				}
+			}
+			
+			easyDatabaseCache = Object.values(latestParliaments);
+			return easyDatabaseCache;
+		}
 
 		window.onload = function() {
 			const container = document.getElementById('map-placeholder');
@@ -102,7 +156,16 @@
 				container.innerHTML = WORLD_MAP_SVG;
 			}
 			panZoom = svgPanZoom('#world-map', {
-				zoomEnabled: true, controlIconsEnabled: false, fit: true, center: true, minZoom: 0.5, maxZoom: 20, preventMouseEventsDefault: false,
+				zoomEnabled: true, 
+				controlIconsEnabled: false, 
+				fit: true, 
+				center: true, 
+				minZoom: 0.5, 
+				maxZoom: 20, 
+				preventMouseEventsDefault: false,
+				
+				dblClickZoomEnabled: false,
+				customEventsHandler: mobileEventsHandler,
 				beforePan: function(oldPan, newPan) {
 					var sizes = this.getSizes();
 					var gutterWidth = sizes.width, gutterHeight = sizes.height;
@@ -154,20 +217,21 @@
 		}
 
 		function nextRound() {
-			if (currentMode !== 'endless') return;
+			if (currentMode === 'daily') return;
+			const activeDatabase = (currentMode === 'easy') ? getEasyDatabase() : database;
 			
-			const randomIndex = Math.floor(Math.random() * database.length);
-			target = database[randomIndex];
+			const randomIndex = Math.floor(Math.random() * activeDatabase.length);
+			target = activeDatabase[randomIndex];
 			
 			resetGameStateUI();
 			gameActive = true;
 			document.getElementById('diagram-img').src = target.img;
 			
-			console.log("New Round:", target.country);
+			console.log("New Round (" + currentMode + "):", target.country);
 		}
 
 		function getDailyTarget() {
-			const epoch = new Date("2024-01-01");
+			const epoch = new Date("2026-02-22");
 			const today = new Date();
 			const diffTime = Math.abs(today - epoch);
 			const diffDays = Math.floor(diffTime / (1000 * 60 * 60 * 24)); 
@@ -189,6 +253,7 @@
 			
 			yearInput.style.borderColor = "";
 			yearInput.style.color = "";
+			yearInput.style.display = (currentMode === 'easy') ? 'none' : '';
 
 			const statusText = document.getElementById('selected-display');
 			statusText.innerHTML = "Selected: <span>—</span>";
@@ -196,6 +261,8 @@
 			document.getElementById('submit-btn').disabled = false;
 			document.getElementById('history').innerHTML = '';
 			document.getElementById('win-modal').classList.remove('visible');
+			
+			document.getElementById('main-timer-box').style.display = 'none';
 			
 			if(panZoom) panZoom.reset();
 		}
@@ -314,7 +381,7 @@
 
 			const yearInput = document.getElementById('year-input');
 			const statusText = document.getElementById('selected-display');
-			const userYear = parseInt(yearInput.value);
+			const userYear = (currentMode === 'easy') ? target.year : parseInt(yearInput.value);
 
 			if (!selectedId) { statusText.innerHTML = "<span style='color:#ff5555'>⚠ Select a country!</span>"; return; }
 			if (!userYear) { statusText.innerHTML = "<span style='color:#ff5555'>⚠ Enter year!</span>"; return; }
@@ -371,7 +438,11 @@
 			const historyLog = document.getElementById('history');
 			const row = document.createElement('div');
 			row.className = rowClass;
-			row.innerHTML = `<div>${selectedName}</div><div>${icon} | ${userYear} ${yearIcon}</div>`;
+			let rightSideContent = (currentMode === 'easy') 
+				? icon 
+				: `${icon} | ${userYear} ${yearIcon}`;
+
+			row.innerHTML = `<div>${selectedName}</div><div>${rightSideContent}</div>`;
 			historyLog.prepend(row);
 
 			if (isCountryCorrect && yearDiff === 0) {
@@ -415,14 +486,17 @@
 
 			const timerEls = document.querySelectorAll('.countdown-text');
 			const nextBtn = document.getElementById('next-round-btn');
-			const timerLabel = document.querySelector('.modal-content div[style*="text-transform: uppercase"]'); // Надпись "NEXT GAME IN"
+			const timerLabel = document.querySelector('.modal-content div[style*="text-transform: uppercase"]');
+			const shareBtn = document.getElementById('share-btn');
 
-			if (currentMode === 'endless') {
+			if (currentMode === 'endless' || currentMode === 'easy') {
 				nextBtn.style.display = 'block';
+				if(shareBtn) shareBtn.style.display = 'none';
 				timerEls.forEach(el => el.style.display = 'none');
 				if(timerLabel) timerLabel.style.display = 'none';
 			} else {
 				nextBtn.style.display = 'none';
+				shareBtn.style.display = 'block';
 				timerEls.forEach(el => el.style.display = 'block');
 				if(timerLabel) timerLabel.style.display = 'block';
 			}
@@ -447,6 +521,77 @@
 			const s = Math.floor((diff % (1000 * 60)) / 1000);
 			const timeStr = `${h.toString().padStart(2,'0')}:${m.toString().padStart(2,'0')}:${s.toString().padStart(2,'0')}`;
 			document.querySelectorAll('.countdown-text').forEach(t => t.innerText = timeStr);
+		}
+		function shareResults() {
+			try {
+				const epoch = new Date("2026-02-21");
+				const today = new Date();
+				const diffDays = Math.floor(Math.abs(today - epoch) / (1000 * 60 * 60 * 24));
+
+				const historyRows = document.querySelectorAll('#win-history-list .mini-row');
+				let emojis = [];
+				
+				for (let i = historyRows.length - 1; i >= 0; i--) {
+					const rowDivs = historyRows[i].querySelectorAll('div');
+					if (rowDivs.length >= 2) {
+						const rowText = rowDivs[1].innerText; 
+						const parts = rowText.split(' | ');
+						
+						if (parts.length === 2) {
+							const icon = parts[0].trim(); 
+							const yearIcon = parts[1].trim().split(' ')[1] || ''; 
+							emojis.push(`${icon} ${yearIcon}`);
+						}
+					}
+				}
+
+				const textToShare = `🏛️ Electle #${diffDays}\n\n${emojis.join('\n')}\n\nPlay at: https://electle.fun\n#electle`;
+				const btn = document.getElementById('share-btn');
+
+				const showSuccess = () => {
+					btn.innerText = "✅ COPIED!";
+					btn.style.background = "var(--correct-green)";
+					setTimeout(() => {
+						btn.innerText = "📤 SHARE";
+						btn.style.background = "";
+					}, 2000);
+				};
+
+				const fallbackCopy = () => {
+					const textArea = document.createElement("textarea");
+					textArea.value = textToShare;
+					textArea.style.position = "fixed"; 
+					textArea.style.opacity = "0"; 
+					document.body.appendChild(textArea);
+					textArea.focus();
+					textArea.select();
+					try {
+						document.execCommand('copy');
+						showSuccess();
+					} catch (err) {
+						alert("Copy your result:\n\n" + textToShare);
+					}
+					document.body.removeChild(textArea);
+				};
+
+				if (navigator.share && /mobile|android|iphone|ipad/i.test(navigator.userAgent)) {
+					navigator.share({
+						title: 'My Electle Result',
+						text: textToShare
+					}).catch(err => console.log("Sharing canceled"));
+				} 
+				else {
+					if (navigator.clipboard && window.isSecureContext) {
+						navigator.clipboard.writeText(textToShare)
+							.then(showSuccess)
+							.catch(() => fallbackCopy());
+					} else {
+						fallbackCopy();
+					}
+				}
+			} catch (error) {
+				console.error("Sharing error: ", error);
+			}
 		}
     </script>
 </body>

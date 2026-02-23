@@ -19,7 +19,11 @@
     font-weight: bold;
     transition: all 0.2s ease;
 }
-
+.social-link svg {
+    width: 20px !important;
+    height: 20px !important;
+    cursor: pointer; 
+}
 .social-link:hover {
     color: var(--text-color);
     transform: scale(1.05);
@@ -88,6 +92,8 @@ body {
 	margin: 0;
 	display: flex; flex-direction: column; align-items: center;
 	height: 100vh; overflow: hidden;
+	overscroll-behavior: none;
+    user-select: none;
 }
 
 header { 
@@ -191,3 +197,71 @@ button.guess-btn:disabled { background: #555; cursor: not-allowed; }
 .stat-header { font-size: 0.9rem; font-weight: bold; margin-bottom: 5px; text-align: center; color: #aaa; }
 .mini-row { display: flex; justify-content: space-between; padding: 4px 0; border-bottom: 1px solid #333; font-size: 0.8rem; color: #ccc; }
 .mini-row:last-child { border-bottom: none; }
+.share-btn { display: none; margin-top: 15px; width: 100%; padding: 12px; background: #1da1f2; color: white; border: none; border-radius: 6px; font-weight: bold; font-size: 1.1rem; cursor: pointer; text-transform: uppercase; transition: background 0.2s; }
+.share-btn:hover { background: #1a91da; }
+@media (max-width: 768px) {
+    header {
+        padding: 16px 6px;
+        align-items: center;
+        justify-content: center;
+    }
+    .back-btn {
+        font-size: 20px;
+        padding: 2px 8px;
+    }
+    h1 { 
+        font-size: 1.3rem; 
+        margin: 0;
+    }
+    .subtitle { 
+        font-size: 13px; 
+    }
+
+    .diagram-container {
+        height: 110px; 
+        width: 95%;
+        padding: 5px;
+    }
+
+    .map-wrapper {
+        margin: 5px 0;
+        height: 35vh; 
+        min-height: 220px; 
+        flex-grow: 0;
+        touch-action: none;
+    }
+
+    .bottom-section {
+        padding-bottom: 15px;
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+    }
+    .controls {
+        padding: 8px;
+        margin-bottom: 8px;
+        flex-wrap: wrap;
+    }
+    input {
+        width: 65px;
+        font-size: 16px;
+        padding: 8px;
+    }
+    button.guess-btn {
+        padding: 8px 15px;
+    }
+
+    .history-log {
+        max-height: 130px; 
+        overflow-y: auto;
+        touch-action: pan-y;
+        background: rgba(0,0,0,0.15); 
+        border-radius: 4px;
+        padding: 2px;
+    }
+    .history-row {
+        padding: 6px 10px; 
+        font-size: 0.85rem;
+        margin-bottom: 2px;
+    }
+}
