@@ -233,9 +233,14 @@
 		function getDailyTarget() {
 			const epoch = new Date("2026-02-22");
 			const today = new Date();
+			today.setHours(0, 0, 0, 0); 
+			
 			const diffTime = Math.abs(today - epoch);
-			const diffDays = Math.floor(diffTime / (1000 * 60 * 60 * 24)); 
-			const index = diffDays % database.length;
+			const diffDays = Math.floor(diffTime / (1000 * 60 * 60 * 24));
+			const x = Math.sin(diffDays) * 10000;
+			const pseudoRandom = x - Math.floor(x); 
+			
+			const index = Math.floor(pseudoRandom * database.length);
 			return database[index];
 		}
 
